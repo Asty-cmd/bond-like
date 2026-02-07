@@ -42,11 +42,11 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		for x in dChildren:
 			if x is not CollisionShape3D:
 				x.reparent(self)
-				for y in collisionKata:
+				for y in collisionKata: # THis is the player collision
 					y.scale += Vector3(0.1,0.1,0.1) * 0.15
 					$MeshInstance3D.scale += Vector3(0.1,0.1,0.1) * 0.1
-				
-		
+			else:
+				x.queue_free()
 		body.queue_free()
 		amount_of_metal += 1
 	
@@ -71,7 +71,8 @@ func _get_collision_shape_dube(col_shape: CollisionShape3D) -> CollisionShape3D:
 
 
 func _on_metal_passed() -> void:
-	var dialogue_line1 = await DialogueManager.get_next_dialogue_line(actual_dialogue[0], "start")
-	dia_lab.dialogue_line = dialogue_line1
-	dia_lab.type_out()
+	pass
+	#var dialogue_line1 = await DialogueManager.get_next_dialogue_line(actual_dialogue[0], "start")
+	#dia_lab.dialogue_line = dialogue_line1
+	#dia_lab.type_out()
 	

@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dnt5hw3sb7k0u" path="res://Bondables/TestBondable.tscn" id="2_8uh7m"]
 [ext_resource type="PackedScene" uid="uid://bxo4sgl7myde7" path="res://Bondables/CylindricalBondable.tscn" id="3_6uqi0"]
 [ext_resource type="PackedScene" uid="uid://rbh3qbma7a83" path="res://Player/FollowingCamera.tscn" id="4_ppyta"]
+[ext_resource type="PackedScene" uid="uid://8ubl7jnfleph" path="res://TextBox/Events/TestEvent.tscn" id="5_ykrsh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_37kl0"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -58,3 +59,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1495333, 0.17438178, -3.847
 [node name="FollowingCamera" parent="." unique_id=1254128572 node_paths=PackedStringArray("follows_player") instance=ExtResource("4_ppyta")]
 transform = Transform3D(1, 0, 0, 0, 0.89378667, 0.4484924, 0, -0.4484924, 0.89378667, 0, 2, 2)
 follows_player = NodePath("../KatamariCharacter")
+
+[node name="TestEvent" parent="." unique_id=1593292576 instance=ExtResource("5_ykrsh")]

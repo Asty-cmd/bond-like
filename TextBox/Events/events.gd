@@ -1,7 +1,7 @@
 extends Node3D
 class_name EventAndDialogue
 
-@export var object_to_spawn: Node3D
+@export var object_to_spawn: PackedScene = preload("res://Player/katamari_character.tscn")
 @export var diag_lab: DialogueLabel
 @export var diag_text: Resource
 
