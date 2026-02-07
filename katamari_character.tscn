@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dranmigfu2481"]
+
+[ext_resource type="Script" uid="uid://bi435nkp55o4r" path="res://katamari_character.gd" id="1_y526u"]
+[ext_resource type="Script" uid="uid://cfi4nkegm2mnq" path="res://character_body_3d.gd" id="2_ibhql"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_m78oy"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_s3khq"]
+
+[node name="KatamariCharacter" type="RigidBody3D" unique_id=982810794]
+script = ExtResource("1_y526u")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1518709879]
+mesh = SubResource("SphereMesh_m78oy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=814084164]
+shape = SubResource("SphereShape3D_s3khq")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1088223407]
+script = ExtResource("2_ibhql")
