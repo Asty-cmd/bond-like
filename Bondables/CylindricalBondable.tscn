@@ -1,18 +1,26 @@
 [gd_scene format=3 uid="uid://bxo4sgl7myde7"]
 
 [ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_2vjfw"]
+[ext_resource type="Script" uid="uid://bo5ovsgyjo6cd" path="res://Bondables/area_3d.gd" id="2_elew3"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_2vjfw"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_elew3"]
 
-[node name="CylindricalBondable" type="CharacterBody3D" unique_id=1206149291]
+[node name="CylindricalBondable" type="CharacterBody3D" unique_id=863201554]
 script = ExtResource("1_2vjfw")
 metadata/_custom_type_script = "uid://f0r8i1y2l24v"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1444095896]
 transform = Transform3D(0.34876353, 0, 0, 0, -1.5244938e-08, -0.34876353, 0, 0.34876353, -1.5244938e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_2vjfw")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1496579654]
+script = ExtResource("2_elew3")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D" unique_id=1232262215]
+transform = Transform3D(0.34876353, 0, 0, 0, -1.5244938e-08, -0.34876353, 0, 0.34876353, -1.5244938e-08, 0, 0, 0)
+shape = SubResource("CylinderShape3D_elew3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=20868850]
 transform = Transform3D(0.34876353, 0, 0, 0, -1.5244938e-08, -0.34876353, 0, 0.34876353, -1.5244938e-08, 0, 0, 0)
