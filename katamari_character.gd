@@ -23,5 +23,9 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body is RigidBody3D:
-		pass
+	if body is SuperBondable:
+		var dChildren = body.getColAndMesh()
+		for x in dChildren:
+			x.reparent(self)
+		body.queue_free()
+	

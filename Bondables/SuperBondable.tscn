@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dod0j44imjkld"]
+
+[ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_nnb0a"]
+
+[node name="SuperBondable" type="CharacterBody3D" unique_id=1064057167]
+script = ExtResource("1_nnb0a")

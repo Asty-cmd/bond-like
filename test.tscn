@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://c47gwtddtmwk4"]
 
 [ext_resource type="PackedScene" uid="uid://dranmigfu2481" path="res://katamari_character.tscn" id="1_37kl0"]
+[ext_resource type="PackedScene" uid="uid://dnt5hw3sb7k0u" path="res://Bondables/TestBondable.tscn" id="2_8uh7m"]
+[ext_resource type="PackedScene" uid="uid://bxo4sgl7myde7" path="res://Bondables/CylindricalBondable.tscn" id="3_6uqi0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_37kl0"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -45,3 +47,9 @@ disable_mode = 2
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2095562504]
 transform = Transform3D(1, 0, 0, 0, 0.8652827, 0.5012842, 0, -0.5012842, 0.8652827, 0, 1.5340633, 2.8255825)
+
+[node name="TestBondable" parent="." unique_id=874704867 instance=ExtResource("2_8uh7m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.61234367, 0.1, -4.7491064)
+
+[node name="CylindricalBondable" parent="." unique_id=1206149291 instance=ExtResource("3_6uqi0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.76699924, 0.17438178, -3.847695)

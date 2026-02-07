@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dnt5hw3sb7k0u"]
+
+[ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_t6s48"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_gkshc"]
+size = Vector3(0.2, 0.2, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gkshc"]
+size = Vector3(0.2, 0.2, 0.2)
+
+[node name="TestBondable" type="CharacterBody3D" unique_id=1601783151]
+script = ExtResource("1_t6s48")
+metadata/_custom_type_script = "uid://f0r8i1y2l24v"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1696254890]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1.0231155, 0, 0, 0)
+mesh = SubResource("BoxMesh_gkshc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=71843733]
+shape = SubResource("BoxShape3D_gkshc")
