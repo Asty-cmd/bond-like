@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dranmigfu2481"]
+
+[ext_resource type="Script" uid="uid://bi435nkp55o4r" path="res://katamari_character.gd" id="1_y526u"]
+[ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/dialogue_label.gd" id="2_y526u"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_m78oy"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_s3khq"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ne567"]
+radius = 0.53882575
+
+[node name="KatamariCharacter" type="RigidBody3D" unique_id=982810794 node_paths=PackedStringArray("dia_lab")]
+can_sleep = false
+script = ExtResource("1_y526u")
+dia_lab = NodePath("DialogueLabel")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1518709879]
+mesh = SubResource("SphereMesh_m78oy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=814084164]
+shape = SubResource("SphereShape3D_s3khq")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1910655814]
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1379476863]
+shape = SubResource("SphereShape3D_ne567")
+
+[node name="DialogueLabel" type="RichTextLabel" parent="." unique_id=560314460]
+offset_left = 384.0
+offset_top = 385.0
+offset_right = 848.0
+offset_bottom = 614.0
+text = "asdg esifnoinvoin asion doin bnri ansdnue t"
+script = ExtResource("2_y526u")
+skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
+metadata/_custom_type_script = "uid://g32um0mltv5d"
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

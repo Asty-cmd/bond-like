@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://8ubl7jnfleph"]
+
+[ext_resource type="Script" uid="uid://dt5hpbqsd8xje" path="res://TextBox/Events/test_event.gd" id="1_mskk4"]
+[ext_resource type="Resource" uid="uid://dykdgviwwys2w" path="res://TextBox/MetroPD.dialogue" id="2_iicnq"]
+[ext_resource type="PackedScene" uid="uid://bxo4sgl7myde7" path="res://Bondables/CylindricalBondable.tscn" id="3_6qcs7"]
+[ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/dialogue_label.gd" id="4_3duw3"]
+
+[node name="TestEvent" type="Node3D" unique_id=1593292576 node_paths=PackedStringArray("object_to_spawn", "diag_lab")]
+script = ExtResource("1_mskk4")
+object_to_spawn = NodePath("CylindricalBondable")
+diag_lab = NodePath("DialogueLabel")
+diag_text = ExtResource("2_iicnq")
+metadata/_custom_type_script = "uid://dlujf2isi806u"
+
+[node name="CylindricalBondable" parent="." unique_id=863201554 instance=ExtResource("3_6qcs7")]
+
+[node name="DialogueLabel" type="RichTextLabel" parent="." unique_id=1287761534]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_3duw3")
+skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
+metadata/_custom_type_script = "uid://g32um0mltv5d"

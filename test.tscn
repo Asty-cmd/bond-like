@@ -50,7 +50,7 @@ disable_mode = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.61234367, 0.1, -4.7491064)
 
 [node name="CylindricalBondable" parent="." unique_id=1206149291 instance=ExtResource("3_6uqi0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.76699924, 0.17438178, -3.847695)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.76699924, 3.7493386, -3.847695)
 
 [node name="CylindricalBondable2" parent="." unique_id=863201554 instance=ExtResource("3_6uqi0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1495333, 0.17438178, -3.847695)
