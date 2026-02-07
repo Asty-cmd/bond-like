@@ -30,13 +30,34 @@ func _integrate_forces(state: PhysicsDirectBodyState3D) -> void:
 	apply_central_force(direction * 10)
 	direction = Vector3.ZERO
 
+var num: int = 0
+
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
+	
 	if body is SuperBondable:
 		var dChildren = body.getColAndMesh()
 		for x in dChildren:
+			var dupe = x.duplicate()
+			if x is CollisionShape3D:
+				dupe = _get_collision_shape_dube(x)
+				
+			#dupe.name += "{num}"
 			x.reparent(self)
+			
 		body.queue_free()
+
+func _get_collision_shape_dube(col_shape: CollisionShape3D) -> CollisionShape3D:
+	var new_collision = CollisionShape3D.new()
+	$Area3D.add_child(new_collision, true)
+	new_collision.shape = col_shape.shape
+	new_collision.global_position = col_shape.global_position
+	new_collision.global_rotation = col_shape.global_rotation
+	new_collision.scale = col_shape.scale
+	#new_collision.transform.basis = col_shape.transform.basis
+	return new_collision
+	
+
 
 	amount_of_metal += 1
 	
