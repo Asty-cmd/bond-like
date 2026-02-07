@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3 uid="uid://dkwvmek7hhj2g"]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_st33b"]
+
+[resource]
+script = ExtResource("1_st33b")
+using_states = PackedStringArray()
+character_names = PackedStringArray()
+metadata/_custom_type_script = "uid://dbs4435dsf3ry"
