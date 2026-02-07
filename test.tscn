@@ -39,7 +39,9 @@ mesh = SubResource("PlaneMesh_mf4mk")
 shape = SubResource("ConcavePolygonShape3D_37kl0")
 
 [node name="KatamariCharacter" parent="." unique_id=982810794 instance=ExtResource("1_37kl0")]
+process_mode = 3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+disable_mode = 2
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=2095562504]
 transform = Transform3D(1, 0, 0, 0, 0.8652827, 0.5012842, 0, -0.5012842, 0.8652827, 0, 1.5340633, 2.8255825)
