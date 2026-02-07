@@ -4,6 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://dnt5hw3sb7k0u" path="res://Bondables/TestBondable.tscn" id="2_8uh7m"]
 [ext_resource type="PackedScene" uid="uid://bxo4sgl7myde7" path="res://Bondables/CylindricalBondable.tscn" id="3_6uqi0"]
 [ext_resource type="PackedScene" uid="uid://rbh3qbma7a83" path="res://Player/FollowingCamera.tscn" id="4_ppyta"]
+[ext_resource type="PackedScene" uid="uid://srly24ne4qbu" path="res://Bondables/SodaCanBondable.tscn" id="5_ykrsh"]
+[ext_resource type="PackedScene" uid="uid://ckqpvvqq4ux10" path="res://Bondables/AxeBondable.tscn" id="6_g14j6"]
+[ext_resource type="PackedScene" uid="uid://cnfchxgtqp7bb" path="res://Bondables/SawbladeBondable.tscn" id="7_vbegm"]
+[ext_resource type="PackedScene" uid="uid://bt68ofvjpg5on" path="res://Bondables/SledgehammerBondable.tscn" id="8_ehkex"]
+[ext_resource type="PackedScene" uid="uid://di3ksk7bcdfo1" path="res://Bondables/ToolboxBondable.tscn" id="9_xersf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_37kl0"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -34,6 +39,7 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=249213392]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 mesh = SubResource("PlaneMesh_mf4mk")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=281900712]
@@ -58,3 +64,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1495333, 0.17438178, -3.847
 [node name="FollowingCamera" parent="." unique_id=1254128572 node_paths=PackedStringArray("follows_player") instance=ExtResource("4_ppyta")]
 transform = Transform3D(1, 0, 0, 0, 0.89378667, 0.4484924, 0, -0.4484924, 0.89378667, 0, 2, 2)
 follows_player = NodePath("../KatamariCharacter")
+
+[node name="SodaCanBondable" parent="." unique_id=1860948381 instance=ExtResource("5_ykrsh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.8170815, 9.536743e-07, -4.764777)
+
+[node name="AxeBondable" parent="." unique_id=2145442276 instance=ExtResource("6_g14j6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2759724, 0.35588953, -13.659884)
+
+[node name="SawbladeBondable" parent="." unique_id=1251473246 instance=ExtResource("7_vbegm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.256044, 0, -3.4755702)
+
+[node name="SledgehammerBondable" parent="." unique_id=1269120917 instance=ExtResource("8_ehkex")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6362243, 0.30935597, -3.6973362)
+
+[node name="ToolboxBondable" parent="." unique_id=33325230 instance=ExtResource("9_xersf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.413695, 0.04548061, 1.8577929)

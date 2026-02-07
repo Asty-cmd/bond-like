@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bt68ofvjpg5on"]
+
+[ext_resource type="PackedScene" uid="uid://dcepeqah1anu2" path="res://Objects/Sledgehammer.glb" id="1_45dyf"]
+[ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_uscl2"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_uscl2"]
+height = 4.55249
+radius = 0.15478516
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vkqan"]
+size = Vector3(0.6575928, 0.6538086, 1.4647827)
+
+[node name="SledgehammerBondable" type="CharacterBody3D" unique_id=1269120917]
+script = ExtResource("1_uscl2")
+
+[node name="Sledgehammer2" parent="." unique_id=1858982762 instance=ExtResource("1_45dyf")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1166943229]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -0.019897461, -8.6974694e-10, 0)
+shape = SubResource("CylinderShape3D_uscl2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=267113598]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8578491, 0.011474609, -9.1552734e-05)
+shape = SubResource("BoxShape3D_vkqan")
