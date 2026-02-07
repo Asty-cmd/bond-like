@@ -30,13 +30,32 @@ monitorable = false
 shape = SubResource("SphereShape3D_ne567")
 
 [node name="DialogueLabel" type="RichTextLabel" parent="." unique_id=560314460]
-offset_left = 359.0
-offset_top = 44.0
-offset_right = 714.0
-offset_bottom = 192.0
+offset_left = -437.0
+offset_top = 266.0
+offset_right = 437.0
+offset_bottom = 435.0
 script = ExtResource("2_y526u")
+pause_at_characters = ".?!-"
 skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
+seconds_per_pause_step = 0.5
 metadata/_custom_type_script = "uid://g32um0mltv5d"
+
+[node name="Control" type="Control" parent="." unique_id=206846099]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=2135455366]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = 255.0
+offset_right = 432.0
+offset_bottom = 432.0
+color = Color(0.31353983, 0.044305496, 0.04352933, 1)
 
 [connection signal="metal_passed" from="." to="." method="_on_metal_passed"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
