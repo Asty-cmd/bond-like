@@ -52,6 +52,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.61234367, 0.1, -4.7491064)
 [node name="CylindricalBondable" parent="." unique_id=1206149291 instance=ExtResource("3_6uqi0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.76699924, 0.17438178, -3.847695)
 
+[node name="CylindricalBondable2" parent="." unique_id=863201554 instance=ExtResource("3_6uqi0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1495333, 0.17438178, -3.847695)
+
 [node name="FollowingCamera" parent="." unique_id=1254128572 node_paths=PackedStringArray("follows_player") instance=ExtResource("4_ppyta")]
 transform = Transform3D(1, 0, 0, 0, 0.89378667, 0.4484924, 0, -0.4484924, 0.89378667, 0, 2, 2)
 follows_player = NodePath("../KatamariCharacter")
