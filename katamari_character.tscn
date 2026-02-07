@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bx1qicjptxyw1"]
+
+[ext_resource type="Script" path="res://katamari_character.gd" id="1_y526u"]
+[ext_resource type="PackedScene" uid="uid://dvm4gp0kvk3kq" path="res://TextBox/TextLocation.tscn" id="2_y526u"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_m78oy"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_s3khq"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ne567"]
+radius = 0.53882575
+
+[node name="KatamariCharacter" type="RigidBody3D" unique_id=982810794]
+script = ExtResource("1_y526u")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1518709879]
+mesh = SubResource("SphereMesh_m78oy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=814084164]
+shape = SubResource("SphereShape3D_s3khq")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1910655814]
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1379476863]
+shape = SubResource("SphereShape3D_ne567")
+
+[node name="TextLocation" parent="." unique_id=387301634 instance=ExtResource("2_y526u")]
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

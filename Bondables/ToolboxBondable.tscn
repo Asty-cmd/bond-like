@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://di3ksk7bcdfo1"]
+
+[ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_tqvgf"]
+[ext_resource type="PackedScene" uid="uid://bb0ghvrv0nti8" path="res://Objects/Toolbox.glb" id="2_sklsc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cw3vd"]
+size = Vector3(2.105713, 1.2907715, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tqvgf"]
+size = Vector3(0.8814087, 0.44628906, 0.26068115)
+
+[node name="ToolboxBondable" type="CharacterBody3D" unique_id=33325230]
+script = ExtResource("1_tqvgf")
+
+[node name="Toolbox2" parent="." unique_id=1280166649 instance=ExtResource("2_sklsc")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=496505441]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00036621094, 0.5970459, 0)
+shape = SubResource("BoxShape3D_cw3vd")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=555521538]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0008239746, 1.3848315, -0.000579834)
+shape = SubResource("BoxShape3D_tqvgf")

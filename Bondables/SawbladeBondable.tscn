@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cnfchxgtqp7bb"]
+
+[ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_xiuq3"]
+[ext_resource type="PackedScene" uid="uid://kmh8vr22pwxk" path="res://Objects/Sawblade.glb" id="2_q847h"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_uy5hr"]
+height = 0.06793213
+radius = 1.125
+
+[node name="SawbladeBondable" type="CharacterBody3D" unique_id=1251473246]
+script = ExtResource("1_xiuq3")
+
+[node name="Sawblade2" parent="." unique_id=426382085 instance=ExtResource("2_q847h")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1506756664]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.016021729, 0)
+shape = SubResource("CylinderShape3D_uy5hr")
