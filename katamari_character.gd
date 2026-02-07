@@ -4,13 +4,19 @@ var direction: Vector3 = Vector3.ZERO
 var input_dir: Vector2 = Vector2.ZERO
 var apply_imp: bool = false
 
+var amount_of_metal: int = 0
+
+var resource = load("res://TextBox/TestTestDialogue.dialogue")
+@export var dia_lab: DialogueLabel
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
+	
 	
 	input_dir = Input.get_vector("left", "right", "forward", "backward")
 	if input_dir:
@@ -28,4 +34,5 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		for x in dChildren:
 			x.reparent(self)
 		body.queue_free()
-	
+
+	amount_of_metal += 1
