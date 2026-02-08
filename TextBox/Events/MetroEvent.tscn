@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://dykdgviwwys2w" path="res://TextBox/MetroPD.dialogue" id="3_mluje"]
 [ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/dialogue_label.gd" id="4_gigb2"]
 
-[node name="MetroDownEvent" type="Node3D" unique_id=414863817 node_paths=PackedStringArray("diag_lab")]
+[node name="MetroDTEvent" type="Node3D" unique_id=414863817 node_paths=PackedStringArray("diag_lab")]
 script = ExtResource("1_33qwc")
 object_to_spawn = ExtResource("2_33qwc")
 diag_lab = NodePath("DialogueLabel2")

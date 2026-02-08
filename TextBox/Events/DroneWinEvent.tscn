@@ -1,15 +1,15 @@
-[gd_scene format=3 uid="uid://dulgnmee5510b"]
+[gd_scene format=3 uid="uid://c1yks4mk2g70a"]
 
 [ext_resource type="Script" uid="uid://dt5hpbqsd8xje" path="res://TextBox/Events/test_event.gd" id="1_wtm2c"]
 [ext_resource type="PackedScene" uid="uid://3iokii574bpu" path="res://Objects/Sedan.glb" id="2_oyppo"]
-[ext_resource type="Resource" uid="uid://dykdgviwwys2w" path="res://TextBox/MetroPD.dialogue" id="3_4op3h"]
+[ext_resource type="Resource" uid="uid://c6pbndg8vokmq" path="res://TextBox/DroneWin.dialogue" id="3_wtm2c"]
 [ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/dialogue_label.gd" id="4_dv75c"]
 
 [node name="DroneWinEvent" type="Node3D" unique_id=414863817 node_paths=PackedStringArray("diag_lab")]
 script = ExtResource("1_wtm2c")
 object_to_spawn = ExtResource("2_oyppo")
 diag_lab = NodePath("DialogueLabel2")
-diag_text = ExtResource("3_4op3h")
+diag_text = ExtResource("3_wtm2c")
 metadata/_custom_type_script = "uid://dlujf2isi806u"
 
 [node name="DialogueLabel2" type="RichTextLabel" parent="." unique_id=525284190]
