@@ -1,7 +1,14 @@
 [gd_scene format=3 uid="uid://dranmigfu2481"]
 
 [ext_resource type="Script" uid="uid://bi435nkp55o4r" path="res://Player/katamari_character.gd" id="1_y526u"]
+[ext_resource type="PackedScene" uid="uid://dbeo7ixuqrj4p" path="res://TextBox/Events/MetroEvent.tscn" id="3_nlfrg"]
+[ext_resource type="PackedScene" uid="uid://bsbr3jc0jiym6" path="res://TextBox/Events/OfficerDownEvent.tscn" id="4_mvjkl"]
 [ext_resource type="PackedScene" uid="uid://ia5uo8c43lqb" path="res://TextBox/Events/Ch7NewsEvent.tscn" id="4_nlfrg"]
+[ext_resource type="PackedScene" uid="uid://db2oerxeiy5ld" path="res://TextBox/Events/Channel10Event.tscn" id="5_2bw8v"]
+[ext_resource type="PackedScene" uid="uid://pgipvqmhm634" path="res://TextBox/Events/UMOAlertEvent.tscn" id="6_qwevy"]
+[ext_resource type="PackedScene" uid="uid://dh4g51l2hn17a" path="res://TextBox/Events/NationalAlertEvent.tscn" id="7_48028"]
+[ext_resource type="PackedScene" uid="uid://b42uep671b75e" path="res://TextBox/Events/UNGlobalAlertEvent.tscn" id="8_roqgn"]
+[ext_resource type="PackedScene" uid="uid://c1yks4mk2g70a" path="res://TextBox/Events/DroneWinEvent.tscn" id="9_qwevy"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_m78oy"]
 
@@ -17,7 +24,14 @@ script = ExtResource("1_y526u")
 metal_modulo = 2
 collisionKata = [NodePath("CollisionShape3D2"), NodePath("Area3D/Area3dCollisionBody")]
 eventsToDo = Dictionary[int, PackedScene]({
-2: ExtResource("4_nlfrg")
+10: ExtResource("3_nlfrg"),
+20: ExtResource("4_mvjkl"),
+40: ExtResource("4_nlfrg"),
+100: ExtResource("5_2bw8v"),
+250: ExtResource("6_qwevy"),
+500: ExtResource("7_48028"),
+1000: ExtResource("8_roqgn"),
+4000: ExtResource("9_qwevy")
 })
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1518709879]
@@ -32,19 +46,6 @@ monitorable = false
 
 [node name="Area3dCollisionBody" type="CollisionShape3D" parent="Area3D" unique_id=1379476863]
 shape = SubResource("SphereShape3D_ne567")
-
-[node name="DialogueLabel" type="RichTextLabel" parent="." unique_id=560314460]
-offset_left = 359.0
-offset_top = 44.0
-offset_right = 714.0
-offset_bottom = 192.0
-script = ExtResource("2_y526u")
-skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
-metadata/_custom_type_script = "uid://g32um0mltv5d"
-
-[node name="JumpTimer" type="Timer" parent="." unique_id=674158244]
-wait_time = 3.0
-one_shot = true
 
 [connection signal="metal_passed" from="." to="." method="_on_metal_passed"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
