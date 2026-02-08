@@ -4,11 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://dbeo7ixuqrj4p" path="res://TextBox/Events/MetroEvent.tscn" id="3_nlfrg"]
 [ext_resource type="PackedScene" uid="uid://bsbr3jc0jiym6" path="res://TextBox/Events/OfficerDownEvent.tscn" id="4_mvjkl"]
 [ext_resource type="PackedScene" uid="uid://ia5uo8c43lqb" path="res://TextBox/Events/Ch7NewsEvent.tscn" id="4_nlfrg"]
-[ext_resource type="PackedScene" uid="uid://db2oerxeiy5ld" path="res://TextBox/Events/Channel10Event.tscn" id="5_2bw8v"]
-[ext_resource type="PackedScene" uid="uid://pgipvqmhm634" path="res://TextBox/Events/UMOAlertEvent.tscn" id="6_qwevy"]
-[ext_resource type="PackedScene" uid="uid://dh4g51l2hn17a" path="res://TextBox/Events/NationalAlertEvent.tscn" id="7_48028"]
-[ext_resource type="PackedScene" uid="uid://b42uep671b75e" path="res://TextBox/Events/UNGlobalAlertEvent.tscn" id="8_roqgn"]
-[ext_resource type="PackedScene" uid="uid://c1yks4mk2g70a" path="res://TextBox/Events/DroneWinEvent.tscn" id="9_qwevy"]
+[ext_resource type="PackedScene" uid="uid://cnnemgvta018q" path="res://TextBox/Events/Channel10Event.tscn" id="5_2bw8v"]
+[ext_resource type="PackedScene" uid="uid://doqxnaaoq35uw" path="res://TextBox/Events/UMOAlertEvent.tscn" id="6_qwevy"]
+[ext_resource type="PackedScene" uid="uid://dqbxp0dvboswv" path="res://TextBox/Events/NationalAlertEvent.tscn" id="7_48028"]
+[ext_resource type="PackedScene" uid="uid://dgk5l6b5qj75h" path="res://TextBox/Events/UNGlobalAlertEvent.tscn" id="8_roqgn"]
+[ext_resource type="PackedScene" uid="uid://dulgnmee5510b" path="res://TextBox/Events/DroneWinEvent.tscn" id="9_qwevy"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_m78oy"]
 

@@ -81,10 +81,14 @@ func _get_collision_shape_dube(col_shape: CollisionShape3D) -> CollisionShape3D:
 
 var test: bool = true
 func _on_metal_passed() -> void:
+	var event = null
+	var keys = eventsToDo.keys()
+	for key in keys:
+		if amount_of_metal > key:
+			event = eventsToDo.get(key)
+			break
 	
 	
-	
-	var event = eventsToDo.get(amount_of_metal)
 	
 	if event:
 		var instcevent = event.instantiate()
