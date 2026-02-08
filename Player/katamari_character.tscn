@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dqbxp0dvboswv" path="res://TextBox/Events/NationalAlertEvent.tscn" id="7_48028"]
 [ext_resource type="PackedScene" uid="uid://dgk5l6b5qj75h" path="res://TextBox/Events/UNGlobalAlertEvent.tscn" id="8_roqgn"]
 [ext_resource type="PackedScene" uid="uid://dulgnmee5510b" path="res://TextBox/Events/DroneWinEvent.tscn" id="9_qwevy"]
-[ext_resource type="PackedScene" uid="uid://dflnphgui326l" path="res://TextBox/Events/IntroTextEvent.tscn" id="10_48028"]
+[ext_resource type="PackedScene" uid="uid://ho15yynwmnfv" path="res://TextBox/Events/IntroTextEvent.tscn" id="10_48028"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_m78oy"]
 
