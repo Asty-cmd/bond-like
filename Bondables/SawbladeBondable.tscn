@@ -9,6 +9,7 @@ radius = 1.125
 
 [node name="SawbladeBondable" type="CharacterBody3D" unique_id=1251473246]
 script = ExtResource("1_xiuq3")
+metal_given = 2.0
 
 [node name="Sawblade2" parent="." unique_id=426382085 instance=ExtResource("2_q847h")]
 

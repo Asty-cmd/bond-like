@@ -9,9 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://dqbxp0dvboswv" path="res://TextBox/Events/NationalAlertEvent.tscn" id="7_48028"]
 [ext_resource type="PackedScene" uid="uid://dgk5l6b5qj75h" path="res://TextBox/Events/UNGlobalAlertEvent.tscn" id="8_roqgn"]
 [ext_resource type="PackedScene" uid="uid://dulgnmee5510b" path="res://TextBox/Events/DroneWinEvent.tscn" id="9_qwevy"]
-[ext_resource type="PackedScene" uid="uid://ho15yynwmnfv" path="res://TextBox/Events/IntroTextEvent.tscn" id="10_48028"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_m78oy"]
+[ext_resource type="PackedScene" uid="uid://dflnphgui326l" path="res://TextBox/Events/IntroTextEvent.tscn" id="10_48028"]
+[ext_resource type="PackedScene" uid="uid://bi1xap1hgrdge" path="res://Objects/EvilBall.glb" id="11_roqgn"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_mcdrk"]
 points = PackedVector3Array(0.4578707, 0.19807906, 0.01578243, -0.48873997, -0.09168735, -0.04518683, -0.47150937, -0.1370268, -0.090701535, 0.07635914, -0.33327514, 0.36417928, 0.13656896, -0.33242497, -0.3469059, -0.15161654, 0.47198188, -0.060245913, -0.10534735, 0.21193622, 0.43966028, -0.045016855, 0.19809827, -0.4564163, 0.4090765, -0.15116782, 0.2425159, -0.27137637, -0.37776056, 0.18187061, 0.41147974, -0.07598096, -0.27324012, 0.19819722, -0.4561612, -0.04493101, -0.24064063, -0.33167413, -0.2857683, 0.22713655, 0.2567203, 0.36304116, 0.22752243, 0.42360392, -0.13548777, -0.37899047, 0.060702223, 0.31946206, -0.40674683, 0.18104935, -0.22569102, -0.014631338, -0.09176946, 0.49022886, -0.37785473, 0.30279276, 0.121712334, 0.046232317, 0.45601088, 0.19818504, -0.22746402, -0.060786348, -0.44034815, 0.22845526, 0.06072284, -0.43988743, -0.09113759, -0.48924586, -0.045174047, 0.44186506, -0.22821625, -0.044958085, 0.31717873, 0.24121423, -0.30081153, -0.044848714, 0.39473665, -0.30295488, -0.316348, -0.19622163, 0.33255145, 0.19844188, -0.03042933, 0.45723665, 0.061471395, -0.1522456, -0.47130713, 0.36308852, 0.25670764, 0.22707908, 0.15213433, -0.43948856, 0.18237916, -0.21072462, 0.36227608, 0.2722302)
@@ -35,9 +34,6 @@ eventsToDo = Dictionary[int, PackedScene]({
 4000: ExtResource("9_qwevy")
 })
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1518709879]
-mesh = SubResource("SphereMesh_m78oy")
-
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1500299591]
 shape = SubResource("ConvexPolygonShape3D_mcdrk")
 
@@ -57,6 +53,9 @@ one_shot = true
 autostart = true
 
 [node name="IntroTextEvent" parent="." unique_id=414863817 instance=ExtResource("10_48028")]
+
+[node name="EvilBall" parent="." unique_id=94063778 instance=ExtResource("11_roqgn")]
+transform = Transform3D(0.525, 0, 0, 0, 0.525, 0, 0, 0, 0.525, 0, 0, 0)
 
 [connection signal="metal_passed" from="." to="." method="_on_metal_passed"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bfxt4kq2knbl7"]
+[gd_scene format=3 uid="uid://5ued5ei2h3h2"]
 
 [ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_jhc6f"]
 [ext_resource type="PackedScene" uid="uid://bjlcici555glx" path="res://Objects/Tree.glb" id="2_jhc6f"]
@@ -8,7 +8,7 @@ radius = 0.2
 
 [node name="TreeBondable" type="CharacterBody3D" unique_id=33325230]
 script = ExtResource("1_jhc6f")
-minimum_metal_threshhold = 100.0
+metal_given = 5.0
 
 [node name="Tree2" parent="." unique_id=1793881616 instance=ExtResource("2_jhc6f")]
 

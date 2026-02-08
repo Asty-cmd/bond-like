@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dcoxhxkhclouf"]
+[gd_scene format=3 uid="uid://bgte7yiq4rve3"]
 
 [ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_6nh8m"]
 [ext_resource type="PackedScene" uid="uid://byujyl0xqq4ly" path="res://Objects/Sawmill2.glb" id="2_6xprl"]
@@ -13,6 +13,8 @@ radius = 0.2685547
 
 [node name="Sawmill2Bondable" type="CharacterBody3D" unique_id=1189074414]
 script = ExtResource("1_6nh8m")
+metal_given = 25.0
+minimum_metal_threshhold = 70.0
 
 [node name="Sawmill2" parent="." unique_id=2030673968 instance=ExtResource("2_6xprl")]
 

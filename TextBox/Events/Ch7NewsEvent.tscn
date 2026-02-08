@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ia5uo8c43lqb"]
 
 [ext_resource type="Script" uid="uid://dt5hpbqsd8xje" path="res://TextBox/Events/test_event.gd" id="1_37fkx"]
-[ext_resource type="PackedScene" uid="uid://di3ksk7bcdfo1" path="res://Bondables/ToolboxBondable.tscn" id="2_37fkx"]
+[ext_resource type="PackedScene" uid="uid://bjbnrgu643euv" path="res://Bondables/SedanBondable.tscn" id="2_37fkx"]
 [ext_resource type="Resource" uid="uid://bq6q303w82m3x" path="res://TextBox/Channel News.dialogue" id="3_37fkx"]
 [ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/dialogue_label.gd" id="4_fjf4w"]
 
