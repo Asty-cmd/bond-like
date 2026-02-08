@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b1vq5gxteobl4"]
+
+[ext_resource type="PackedScene" uid="uid://b161ty8fltu15" path="res://Objects/StraightRoad.glb" id="1_amapi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c0lgk"]
+size = Vector3(9, 0.2, 9)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_amapi"]
+size = Vector3(1.5, 0.4, 9)
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=76644623]
+
+[node name="StraightRoad2" parent="." unique_id=1098767468 instance=ExtResource("1_amapi")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1993000727]
+shape = SubResource("BoxShape3D_c0lgk")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=967334859]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.75, 0.1, 0)
+shape = SubResource("BoxShape3D_amapi")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=1016407845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75, 0.1, 0)
+shape = SubResource("BoxShape3D_amapi")
