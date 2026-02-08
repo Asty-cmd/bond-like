@@ -8,11 +8,11 @@ var amount_of_metal: int = 0
 
 signal metal_passed
 
-@onready var test_event: EventAndDialogue = $TestEvent
 
 @export var metal_modulo: int = 1
 @export var collisionKata: Array[CollisionShape3D]
-@export var eventsToDo: Array[Node3D]
+@export var eventsToDo: Array[EventAndDialogue]
+var event_idx: int = 0
 
 @export var actual_dialogue: Array[Resource]
 @onready var dia_lab: DialogueLabel = $DialogueLabel
@@ -73,7 +73,7 @@ func _get_collision_shape_dube(col_shape: CollisionShape3D) -> CollisionShape3D:
 
 var test: bool = true
 func _on_metal_passed() -> void:
-	test_event.trigger_event(Vector3(5,0,5))
+	eventsToDo[event_idx].trigger_event(global_position + Vector3(0,5,0))
 	#var dialogue_line1 = await DialogueManager.get_next_dialogue_line(actual_dialogue[0], "start")
 	#dia_lab.dialogue_line = dialogue_line1
 	#dia_lab.type_out()

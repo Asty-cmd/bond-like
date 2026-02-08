@@ -1,13 +1,11 @@
 [gd_scene format=3 uid="uid://8ubl7jnfleph"]
 
 [ext_resource type="Script" uid="uid://dt5hpbqsd8xje" path="res://TextBox/Events/test_event.gd" id="1_mskk4"]
-[ext_resource type="Resource" uid="uid://dykdgviwwys2w" path="res://TextBox/MetroPD.dialogue" id="2_iicnq"]
 [ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/dialogue_label.gd" id="4_3duw3"]
 
 [node name="TestEvent" type="Node3D" unique_id=1593292576 node_paths=PackedStringArray("diag_lab")]
 script = ExtResource("1_mskk4")
 diag_lab = NodePath("DialogueLabel2")
-diag_text = ExtResource("2_iicnq")
 metadata/_custom_type_script = "uid://dlujf2isi806u"
 
 [node name="DialogueLabel2" type="RichTextLabel" parent="." unique_id=1076181317]

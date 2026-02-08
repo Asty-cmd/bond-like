@@ -17,9 +17,9 @@ func trigger_event(location: Vector3):
 	
 func get_random_direction_3d() -> Vector3:
 
-	var x: float = randf_range(-10.0, 10.0)
+	var x: float = randf_range(-20.0, 20.0)
 	var y: float = randf_range(1.0, 1.0)
-	var z: float = randf_range(-10.0, 10.0)
+	var z: float = randf_range(-20.0, 20.0)
 	
 	var random_vector: Vector3 = Vector3(x, y, z)
 	

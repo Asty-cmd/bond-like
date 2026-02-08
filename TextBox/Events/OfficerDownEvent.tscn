@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bsbr3jc0jiym6"]
+
+[ext_resource type="Script" uid="uid://dlujf2isi806u" path="res://TextBox/Events/events.gd" id="1_p2cu5"]
+[ext_resource type="PackedScene" uid="uid://3iokii574bpu" path="res://Objects/Sedan.glb" id="2_ke7tg"]
+[ext_resource type="Resource" uid="uid://djvu1g1oeuhtf" path="res://TextBox/Officer.dialogue" id="2_qdvqx"]
+[ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/dialogue_label.gd" id="3_ke7tg"]
+
+[node name="OfficerDownEvent" type="Node3D" unique_id=414863817 node_paths=PackedStringArray("diag_lab")]
+script = ExtResource("1_p2cu5")
+object_to_spawn = ExtResource("2_ke7tg")
+diag_lab = NodePath("DialogueLabel2")
+diag_text = ExtResource("2_qdvqx")
+metadata/_custom_type_script = "uid://dlujf2isi806u"
+
+[node name="DialogueLabel2" type="RichTextLabel" parent="." unique_id=525284190]
+z_index = 1
+offset_left = 10.0
+offset_top = 294.0
+offset_right = 402.0
+offset_bottom = 463.0
+script = ExtResource("3_ke7tg")
+pause_at_characters = ".?!-"
+skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
+seconds_per_pause_step = 0.5
+metadata/_custom_type_script = "uid://g32um0mltv5d"
+
+[node name="Control" type="Control" parent="." unique_id=1078946560]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -434.0
+offset_top = 38.0
+offset_right = -394.0
+offset_bottom = 78.0
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=2092918108]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 437.0
+offset_top = 247.0
+offset_right = 824.0
+offset_bottom = 424.0
+color = Color(0.31353983, 0.044305496, 0.04352933, 1)

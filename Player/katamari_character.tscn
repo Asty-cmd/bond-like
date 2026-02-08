@@ -13,11 +13,12 @@ points = PackedVector3Array(0.4578707, 0.19807906, 0.01578243, -0.48873997, -0.0
 [sub_resource type="SphereShape3D" id="SphereShape3D_ne567"]
 radius = 0.53882575
 
-[node name="KatamariCharacter" type="RigidBody3D" unique_id=982810794 node_paths=PackedStringArray("collisionKata")]
+[node name="KatamariCharacter" type="RigidBody3D" unique_id=982810794 node_paths=PackedStringArray("collisionKata", "eventsToDo")]
 can_sleep = false
 script = ExtResource("1_y526u")
 metal_modulo = 2
 collisionKata = [NodePath("CollisionShape3D2"), NodePath("Area3D/Area3dCollisionBody")]
+eventsToDo = [null]
 actual_dialogue = Array[Resource]([ExtResource("2_ibhql"), null])
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1518709879]
