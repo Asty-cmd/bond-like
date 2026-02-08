@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://s6x13hx5yk8w"]
+
+[ext_resource type="Script" uid="uid://dt5hpbqsd8xje" path="res://TextBox/Events/test_event.gd" id="1_11drr"]
+[ext_resource type="Resource" uid="uid://dykdgviwwys2w" path="res://TextBox/MetroPD.dialogue" id="2_48r5j"]
+[ext_resource type="PackedScene" uid="uid://srly24ne4qbu" path="res://Bondables/SodaCanBondable.tscn" id="2_kwxi5"]
+
+[node name="TestEvent" type="Node3D" unique_id=1593292576 node_paths=PackedStringArray("diag_lab")]
+script = ExtResource("1_11drr")
+object_to_spawn = ExtResource("2_kwxi5")
+diag_lab = NodePath("")
+diag_text = ExtResource("2_48r5j")
+metadata/_custom_type_script = "uid://dlujf2isi806u"

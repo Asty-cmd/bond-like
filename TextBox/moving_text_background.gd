@@ -1,11 +1,17 @@
-extends Camera3D
+extends Control
 
-@export var follows_player: Node3D
+@export var anim_player: AnimationPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
-	
+
+func play():
+	anim_player.play("move_right")
+
+func reset():
+	anim_player.play("RESET")
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	global_position = follows_player.global_position + Vector3(0,2,2) * ((follows_player.amount_of_metal * 0.05)+1)
+	pass

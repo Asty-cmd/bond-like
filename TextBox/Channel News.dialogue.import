@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bq6q303w82m3x"
+path="res://.godot/imported/Channel News.dialogue-a36b51dc2caad74dfaf9962b731a065f.tres"
+
+[deps]
+
+source_file="res://TextBox/Channel News.dialogue"
+dest_files=["res://.godot/imported/Channel News.dialogue-a36b51dc2caad74dfaf9962b731a065f.tres"]
+
+[params]
+
+defaults=true

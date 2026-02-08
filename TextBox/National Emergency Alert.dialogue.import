@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://clx8jbyjqtajb"
+path="res://.godot/imported/National Emergency Alert.dialogue-6eaacf5dc2d3e85be8b2d81ad9be5d6d.tres"
+
+[deps]
+
+source_file="res://TextBox/National Emergency Alert.dialogue"
+dest_files=["res://.godot/imported/National Emergency Alert.dialogue-6eaacf5dc2d3e85be8b2d81ad9be5d6d.tres"]
+
+[params]
+
+defaults=true

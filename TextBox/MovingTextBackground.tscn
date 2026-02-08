@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://dne0l5c6cq3la"]
+
+[ext_resource type="Script" uid="uid://bkct2qwriwshi" path="res://TextBox/moving_text_background.gd" id="1_xnd7l"]
+
+[sub_resource type="Animation" id="Animation_xccqh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/ColorRect:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1163, 197)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-732, 658)]
+}
+
+[sub_resource type="Animation" id="Animation_xnd7l"]
+resource_name = "move_right"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/ColorRect:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.46),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1163, 197), Vector2(1163, 197)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/ColorRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.46, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-732, 658), Vector2(-427.145, 658), Vector2(-300, 658)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ikdf3"]
+_data = {
+&"RESET": SubResource("Animation_xccqh"),
+&"move_right": SubResource("Animation_xnd7l")
+}
+
+[node name="MovingTextBackground" type="Control" unique_id=1387465936 node_paths=PackedStringArray("anim_player")]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_xnd7l")
+anim_player = NodePath("AnimationPlayer")
+
+[node name="Control" type="Control" parent="." unique_id=571680058]
+anchors_preset = 0
+offset_left = -434.0
+offset_top = 38.0
+offset_right = -394.0
+offset_bottom = 78.0
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1758785568]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -732.0
+offset_top = 658.0
+offset_right = 411.0
+offset_bottom = 835.0
+color = Color(0.31353983, 0.044305496, 0.04352933, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1343411057]
+libraries/ = SubResource("AnimationLibrary_ikdf3")

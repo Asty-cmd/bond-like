@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cbtvqr5hacs37"
+path="res://.godot/imported/Channel 10 News.dialogue-8c9fd0adca9104a2b5e20eb27fe0ce3d.tres"
+
+[deps]
+
+source_file="res://Channel 10 News.dialogue"
+dest_files=["res://.godot/imported/Channel 10 News.dialogue-8c9fd0adca9104a2b5e20eb27fe0ce3d.tres"]
+
+[params]
+
+defaults=true

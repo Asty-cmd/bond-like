@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c6pbndg8vokmq"
+path="res://.godot/imported/DroneWin.dialogue-30f01ec41360050702fd394430dce585.tres"
+
+[deps]
+
+source_file="res://TextBox/DroneWin.dialogue"
+dest_files=["res://.godot/imported/DroneWin.dialogue-30f01ec41360050702fd394430dce585.tres"]
+
+[params]
+
+defaults=true

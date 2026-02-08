@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://8ubl7jnfleph"]
+
+[ext_resource type="Script" uid="uid://dt5hpbqsd8xje" path="res://TextBox/Events/test_event.gd" id="1_mskk4"]
+[ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/dialogue_label.gd" id="4_3duw3"]
+
+[node name="TestEvent" type="Node3D" unique_id=1593292576 node_paths=PackedStringArray("diag_lab")]
+script = ExtResource("1_mskk4")
+diag_lab = NodePath("DialogueLabel2")
+metadata/_custom_type_script = "uid://dlujf2isi806u"
+
+[node name="DialogueLabel2" type="RichTextLabel" parent="." unique_id=1076181317]
+z_index = 1
+offset_left = 10.0
+offset_top = 294.0
+offset_right = 402.0
+offset_bottom = 463.0
+script = ExtResource("4_3duw3")
+pause_at_characters = ".?!-"
+skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
+seconds_per_pause_step = 0.5
+metadata/_custom_type_script = "uid://g32um0mltv5d"

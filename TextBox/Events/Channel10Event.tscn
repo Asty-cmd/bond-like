@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cnnemgvta018q"]
+
+[ext_resource type="Script" uid="uid://dt5hpbqsd8xje" path="res://TextBox/Events/test_event.gd" id="1_mh7cc"]
+[ext_resource type="PackedScene" uid="uid://3iokii574bpu" path="res://Objects/Sedan.glb" id="2_b5yvt"]
+[ext_resource type="Resource" uid="uid://cbtvqr5hacs37" path="res://Channel 10 News.dialogue" id="3_mh7cc"]
+[ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/dialogue_label.gd" id="4_lcj06"]
+
+[node name="Channel10Event" type="Node3D" unique_id=414863817 node_paths=PackedStringArray("diag_lab")]
+script = ExtResource("1_mh7cc")
+object_to_spawn = ExtResource("2_b5yvt")
+diag_lab = NodePath("DialogueLabel2")
+diag_text = ExtResource("3_mh7cc")
+metadata/_custom_type_script = "uid://dlujf2isi806u"
+
+[node name="DialogueLabel2" type="RichTextLabel" parent="." unique_id=525284190]
+z_index = 1
+offset_left = 10.0
+offset_top = 294.0
+offset_right = 402.0
+offset_bottom = 463.0
+script = ExtResource("4_lcj06")
+pause_at_characters = ".?!-"
+skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
+seconds_per_pause_step = 0.5
+metadata/_custom_type_script = "uid://g32um0mltv5d"
