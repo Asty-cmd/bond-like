@@ -14,7 +14,7 @@ signal metal_passed
 @export var collisionKata: Array[CollisionShape3D]
 @export var eventsToDo: Dictionary[int, PackedScene]
 var event_idx: int = 0
-
+@export var character_mesh: Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -49,11 +49,11 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 			return
 		var dChildren = body.getColAndMesh()
 		for x in dChildren:
-			if x is not CollisionShape3D:
+			if x is not CollisionShape3D and x is not CollisionPolygon3D:
 				x.reparent(self)
 				for y in collisionKata: # THis is the player collision
 					y.scale += Vector3(0.1,0.1,0.1) * 0.2
-					$MeshInstance3D.scale += Vector3(0.1,0.1,0.1) * 0.15
+					character_mesh.scale += Vector3(0.1,0.1,0.1) * 0.15
 			else:
 				x.queue_free()
 		amount_of_metal += body.metal_given

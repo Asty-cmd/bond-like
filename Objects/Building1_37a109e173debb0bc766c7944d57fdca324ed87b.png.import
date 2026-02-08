@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqgo7ndxxtb12"
 path.s3tc="res://.godot/imported/Building1_37a109e173debb0bc766c7944d57fdca324ed87b.png-7186e1a080dbbf718eec42e0a9ce847b.s3tc.ctex"
+path.etc2="res://.godot/imported/Building1_37a109e173debb0bc766c7944d57fdca324ed87b.png-7186e1a080dbbf718eec42e0a9ce847b.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Objects/Building1_37a109e173debb0bc766c7944d57fdca324ed87b.png"
-dest_files=["res://.godot/imported/Building1_37a109e173debb0bc766c7944d57fdca324ed87b.png-7186e1a080dbbf718eec42e0a9ce847b.s3tc.ctex"]
+dest_files=["res://.godot/imported/Building1_37a109e173debb0bc766c7944d57fdca324ed87b.png-7186e1a080dbbf718eec42e0a9ce847b.s3tc.ctex", "res://.godot/imported/Building1_37a109e173debb0bc766c7944d57fdca324ed87b.png-7186e1a080dbbf718eec42e0a9ce847b.etc2.ctex"]
 
 [params]
 

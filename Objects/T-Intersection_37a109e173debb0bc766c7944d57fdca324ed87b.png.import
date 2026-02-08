@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://iqfufripfloj"
 path.s3tc="res://.godot/imported/T-Intersection_37a109e173debb0bc766c7944d57fdca324ed87b.png-2b85cbfdfd43d621576488e38f57fcf8.s3tc.ctex"
+path.etc2="res://.godot/imported/T-Intersection_37a109e173debb0bc766c7944d57fdca324ed87b.png-2b85cbfdfd43d621576488e38f57fcf8.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Objects/T-Intersection_37a109e173debb0bc766c7944d57fdca324ed87b.png"
-dest_files=["res://.godot/imported/T-Intersection_37a109e173debb0bc766c7944d57fdca324ed87b.png-2b85cbfdfd43d621576488e38f57fcf8.s3tc.ctex"]
+dest_files=["res://.godot/imported/T-Intersection_37a109e173debb0bc766c7944d57fdca324ed87b.png-2b85cbfdfd43d621576488e38f57fcf8.s3tc.ctex", "res://.godot/imported/T-Intersection_37a109e173debb0bc766c7944d57fdca324ed87b.png-2b85cbfdfd43d621576488e38f57fcf8.etc2.ctex"]
 
 [params]
 

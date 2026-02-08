@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://blea2mxmmf32d"
 path.s3tc="res://.godot/imported/Sawmill1_37a109e173debb0bc766c7944d57fdca324ed87b.png-b8764603a810796e557d959d6af19b23.s3tc.ctex"
+path.etc2="res://.godot/imported/Sawmill1_37a109e173debb0bc766c7944d57fdca324ed87b.png-b8764603a810796e557d959d6af19b23.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Objects/Sawmill1_37a109e173debb0bc766c7944d57fdca324ed87b.png"
-dest_files=["res://.godot/imported/Sawmill1_37a109e173debb0bc766c7944d57fdca324ed87b.png-b8764603a810796e557d959d6af19b23.s3tc.ctex"]
+dest_files=["res://.godot/imported/Sawmill1_37a109e173debb0bc766c7944d57fdca324ed87b.png-b8764603a810796e557d959d6af19b23.s3tc.ctex", "res://.godot/imported/Sawmill1_37a109e173debb0bc766c7944d57fdca324ed87b.png-b8764603a810796e557d959d6af19b23.etc2.ctex"]
 
 [params]
 

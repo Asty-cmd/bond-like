@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjqvmr1wn0f3"
 path.s3tc="res://.godot/imported/SodaCan_37a109e173debb0bc766c7944d57fdca324ed87b.png-3b727d9b8c17ba3c591b3f8dad6c1cfe.s3tc.ctex"
+path.etc2="res://.godot/imported/SodaCan_37a109e173debb0bc766c7944d57fdca324ed87b.png-3b727d9b8c17ba3c591b3f8dad6c1cfe.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Objects/SodaCan_37a109e173debb0bc766c7944d57fdca324ed87b.png"
-dest_files=["res://.godot/imported/SodaCan_37a109e173debb0bc766c7944d57fdca324ed87b.png-3b727d9b8c17ba3c591b3f8dad6c1cfe.s3tc.ctex"]
+dest_files=["res://.godot/imported/SodaCan_37a109e173debb0bc766c7944d57fdca324ed87b.png-3b727d9b8c17ba3c591b3f8dad6c1cfe.s3tc.ctex", "res://.godot/imported/SodaCan_37a109e173debb0bc766c7944d57fdca324ed87b.png-3b727d9b8c17ba3c591b3f8dad6c1cfe.etc2.ctex"]
 
 [params]
 

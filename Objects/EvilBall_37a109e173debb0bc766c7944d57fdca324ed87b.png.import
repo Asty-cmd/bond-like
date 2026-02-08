@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7f5bhhucx3g5"
 path.s3tc="res://.godot/imported/EvilBall_37a109e173debb0bc766c7944d57fdca324ed87b.png-5cc061f90f826cfe3f61c0508e66afdd.s3tc.ctex"
+path.etc2="res://.godot/imported/EvilBall_37a109e173debb0bc766c7944d57fdca324ed87b.png-5cc061f90f826cfe3f61c0508e66afdd.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Objects/EvilBall_37a109e173debb0bc766c7944d57fdca324ed87b.png"
-dest_files=["res://.godot/imported/EvilBall_37a109e173debb0bc766c7944d57fdca324ed87b.png-5cc061f90f826cfe3f61c0508e66afdd.s3tc.ctex"]
+dest_files=["res://.godot/imported/EvilBall_37a109e173debb0bc766c7944d57fdca324ed87b.png-5cc061f90f826cfe3f61c0508e66afdd.s3tc.ctex", "res://.godot/imported/EvilBall_37a109e173debb0bc766c7944d57fdca324ed87b.png-5cc061f90f826cfe3f61c0508e66afdd.etc2.ctex"]
 
 [params]
 

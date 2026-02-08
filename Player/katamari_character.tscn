@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dqbxp0dvboswv" path="res://TextBox/Events/NationalAlertEvent.tscn" id="7_48028"]
 [ext_resource type="PackedScene" uid="uid://dgk5l6b5qj75h" path="res://TextBox/Events/UNGlobalAlertEvent.tscn" id="8_roqgn"]
 [ext_resource type="PackedScene" uid="uid://dulgnmee5510b" path="res://TextBox/Events/DroneWinEvent.tscn" id="9_qwevy"]
-[ext_resource type="PackedScene" uid="uid://dflnphgui326l" path="res://TextBox/Events/IntroTextEvent.tscn" id="10_48028"]
+[ext_resource type="PackedScene" uid="uid://ho15yynwmnfv" path="res://TextBox/Events/IntroTextEvent.tscn" id="10_48028"]
 [ext_resource type="PackedScene" uid="uid://bi1xap1hgrdge" path="res://Objects/EvilBall.glb" id="11_roqgn"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_mcdrk"]
@@ -18,7 +18,7 @@ points = PackedVector3Array(0.4578707, 0.19807906, 0.01578243, -0.48873997, -0.0
 [sub_resource type="SphereShape3D" id="SphereShape3D_ne567"]
 radius = 0.53882575
 
-[node name="KatamariCharacter" type="RigidBody3D" unique_id=982810794 node_paths=PackedStringArray("collisionKata")]
+[node name="KatamariCharacter" type="RigidBody3D" unique_id=982810794 node_paths=PackedStringArray("collisionKata", "character_mesh")]
 can_sleep = false
 script = ExtResource("1_y526u")
 metal_modulo = 2
@@ -33,6 +33,7 @@ eventsToDo = Dictionary[int, PackedScene]({
 1000: ExtResource("8_roqgn"),
 4000: ExtResource("9_qwevy")
 })
+character_mesh = NodePath("EvilBall")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1500299591]
 shape = SubResource("ConvexPolygonShape3D_mcdrk")

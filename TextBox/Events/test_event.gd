@@ -27,6 +27,7 @@ func trigger_event(location: Vector3):
 	moving_text.show()
 	moving_text.play()
 	diag_lab.position = Vector2(10,712)
+	
 	diag_lab.type_out()
 	diag_lab.finished_typing.connect(text_over)
 	for i in range(0,5):

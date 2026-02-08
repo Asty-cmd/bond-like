@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2un3g7ivj02p"
 path.s3tc="res://.godot/imported/Tree_37a109e173debb0bc766c7944d57fdca324ed87b.png-8a11343b8052e570c8f79230257f830f.s3tc.ctex"
+path.etc2="res://.godot/imported/Tree_37a109e173debb0bc766c7944d57fdca324ed87b.png-8a11343b8052e570c8f79230257f830f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Objects/Tree_37a109e173debb0bc766c7944d57fdca324ed87b.png"
-dest_files=["res://.godot/imported/Tree_37a109e173debb0bc766c7944d57fdca324ed87b.png-8a11343b8052e570c8f79230257f830f.s3tc.ctex"]
+dest_files=["res://.godot/imported/Tree_37a109e173debb0bc766c7944d57fdca324ed87b.png-8a11343b8052e570c8f79230257f830f.s3tc.ctex", "res://.godot/imported/Tree_37a109e173debb0bc766c7944d57fdca324ed87b.png-8a11343b8052e570c8f79230257f830f.etc2.ctex"]
 
 [params]
 

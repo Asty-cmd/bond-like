@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cteaf158k0qka"]
+
+[ext_resource type="Script" uid="uid://bu85yeh234ox5" path="res://start_screen.gd" id="1_pevhg"]
+[ext_resource type="Texture2D" uid="uid://crxhxrnyoy4bj" path="res://Spaceship-3.png" id="2_afy8x"]
+
+[node name="StartScreen" type="Control" unique_id=1940680875]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pevhg")
+
+[node name="Button" type="Button" parent="." unique_id=420387197]
+z_index = 2
+layout_mode = 0
+offset_left = 713.0
+offset_top = 739.0
+offset_right = 920.0
+offset_bottom = 846.0
+scale = Vector2(2.3999994, 1.4399987)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1316808956]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+texture = ExtResource("2_afy8x")
+
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]

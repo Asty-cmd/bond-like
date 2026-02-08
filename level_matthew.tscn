@@ -1,17 +1,15 @@
 [gd_scene format=3 uid="uid://cmboriqfktkkq"]
 
-[ext_resource type="PackedScene" uid="uid://rbh3qbma7a83" path="res://Player/FollowingCamera.tscn" id="1_yxiqn"]
-[ext_resource type="PackedScene" uid="uid://dranmigfu2481" path="res://Player/katamari_character.tscn" id="2_b8eas"]
-[ext_resource type="PackedScene" uid="uid://bfxt4kq2knbl7" path="res://Bondables/TreeBondable.tscn" id="3_64vsj"]
-[ext_resource type="PackedScene" uid="uid://dcoxhxkhclouf" path="res://Bondables/Sawmill2Bondable.tscn" id="6_x5jxx"]
+[ext_resource type="PackedScene" uid="uid://5ued5ei2h3h2" path="res://Bondables/TreeBondable.tscn" id="3_64vsj"]
+[ext_resource type="PackedScene" uid="uid://bgte7yiq4rve3" path="res://Bondables/Sawmill2Bondable.tscn" id="6_x5jxx"]
 [ext_resource type="PackedScene" uid="uid://di3ksk7bcdfo1" path="res://Bondables/ToolboxBondable.tscn" id="7_2fxee"]
 [ext_resource type="PackedScene" uid="uid://bt68ofvjpg5on" path="res://Bondables/SledgehammerBondable.tscn" id="8_ry7ul"]
-[ext_resource type="PackedScene" uid="uid://cybu3s18jrmgv" path="res://Bondables/SedanBondable.tscn" id="9_vywip"]
-[ext_resource type="PackedScene" uid="uid://ckqpvvqq4ux10" path="res://Bondables/AxeBondable.tscn" id="10_lty35"]
+[ext_resource type="PackedScene" uid="uid://bjbnrgu643euv" path="res://Bondables/SedanBondable.tscn" id="9_vywip"]
+[ext_resource type="PackedScene" uid="uid://d2fgxc3tt46rr" path="res://Bondables/AxeBondable.tscn" id="10_lty35"]
 [ext_resource type="PackedScene" uid="uid://b1vq5gxteobl4" path="res://Objects/StraightRoad.tscn" id="10_yxiqn"]
 [ext_resource type="PackedScene" uid="uid://srly24ne4qbu" path="res://Bondables/SodaCanBondable.tscn" id="11_67vks"]
 [ext_resource type="PackedScene" uid="uid://dk6n2l0x2jskd" path="res://Objects/T-Intersection.tscn" id="11_b8eas"]
-[ext_resource type="PackedScene" uid="uid://bdulwuaodojd7" path="res://Bondables/Building4Bondable.tscn" id="12_b8eas"]
+[ext_resource type="PackedScene" uid="uid://78myce6gxirh" path="res://Bondables/Building4Bondable.tscn" id="12_b8eas"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_37kl0"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -37,21 +35,12 @@ data = PackedVector3Array(12.5, 0, 12.5, -12.5, 0, 12.5, 12.5, 0, -12.5, -12.5, 
 
 [node name="Test" type="Node3D" unique_id=1928477106]
 
-[node name="FollowingCamera" parent="." unique_id=1254128572 node_paths=PackedStringArray("follows_player") instance=ExtResource("1_yxiqn")]
-transform = Transform3D(1, 0, 0, 0, 0.701519, 0.7126508, 0, -0.7126508, 0.701519, 0, 5, 3.5)
-follows_player = NodePath("../KatamariCharacter")
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=556007659]
 environment = SubResource("Environment_6uqi0")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1679225565]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
-
-[node name="KatamariCharacter" parent="." unique_id=982810794 instance=ExtResource("2_b8eas")]
-process_mode = 3
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9285262, 0.79096293, 0)
-disable_mode = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=249213392]
 transform = Transform3D(-2.1855695e-07, 0, 5, 0, 5, 0, -5, 0, -2.1855695e-07, 8.516752, 0, 3.9791899)

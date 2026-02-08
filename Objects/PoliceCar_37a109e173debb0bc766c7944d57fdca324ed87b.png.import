@@ -4,8 +4,9 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://50bpg4ncjvfj"
 path.s3tc="res://.godot/imported/PoliceCar_37a109e173debb0bc766c7944d57fdca324ed87b.png-ac278d59c0dc2b1e7393264a118a2c92.s3tc.ctex"
+path.etc2="res://.godot/imported/PoliceCar_37a109e173debb0bc766c7944d57fdca324ed87b.png-ac278d59c0dc2b1e7393264a118a2c92.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
@@ -15,7 +16,7 @@ generator_parameters={
 [deps]
 
 source_file="res://Objects/PoliceCar_37a109e173debb0bc766c7944d57fdca324ed87b.png"
-dest_files=["res://.godot/imported/PoliceCar_37a109e173debb0bc766c7944d57fdca324ed87b.png-ac278d59c0dc2b1e7393264a118a2c92.s3tc.ctex"]
+dest_files=["res://.godot/imported/PoliceCar_37a109e173debb0bc766c7944d57fdca324ed87b.png-ac278d59c0dc2b1e7393264a118a2c92.s3tc.ctex", "res://.godot/imported/PoliceCar_37a109e173debb0bc766c7944d57fdca324ed87b.png-ac278d59c0dc2b1e7393264a118a2c92.etc2.ctex"]
 
 [params]
 

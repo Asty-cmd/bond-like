@@ -1,19 +1,17 @@
-[gd_scene format=3 uid="uid://0f8hupnxccpl"]
+[gd_scene format=3 uid="uid://b581u8y7s7og2"]
 
-[ext_resource type="PackedScene" uid="uid://rbh3qbma7a83" path="res://Player/FollowingCamera.tscn" id="1_ikbwe"]
-[ext_resource type="PackedScene" uid="uid://dranmigfu2481" path="res://Player/katamari_character.tscn" id="2_wxtka"]
 [ext_resource type="PackedScene" uid="uid://dt6r24ov6fg5u" path="res://Bondables/Building1NOTBOND.tscn" id="3_5805k"]
 [ext_resource type="PackedScene" uid="uid://c1cvfyr1t0uor" path="res://Bondables/Building2NOTBOND.tscn" id="4_phpvd"]
 [ext_resource type="PackedScene" uid="uid://bmvkunpn5luv3" path="res://Bondables/Building4NOTBOND.tscn" id="5_xawbd"]
 [ext_resource type="PackedScene" uid="uid://bevu0goj8snkx" path="res://Bondables/PoliceCarBondable.tscn" id="6_3wmfi"]
-[ext_resource type="PackedScene" uid="uid://uwm7apbqobk0" path="res://Bondables/Sawmill1Bondable.tscn" id="7_n78kw"]
+[ext_resource type="PackedScene" uid="uid://cvpgi4f7vpuch" path="res://Bondables/Sawmill1Bondable.tscn" id="7_n78kw"]
 [ext_resource type="PackedScene" uid="uid://cnfchxgtqp7bb" path="res://Bondables/SawbladeBondable.tscn" id="8_o1b0l"]
 [ext_resource type="PackedScene" uid="uid://di3ksk7bcdfo1" path="res://Bondables/ToolboxBondable.tscn" id="9_exoll"]
-[ext_resource type="PackedScene" uid="uid://bfxt4kq2knbl7" path="res://Bondables/TreeBondable.tscn" id="10_3twjk"]
-[ext_resource type="PackedScene" uid="uid://cybu3s18jrmgv" path="res://Bondables/SedanBondable.tscn" id="11_wsg6b"]
+[ext_resource type="PackedScene" uid="uid://5ued5ei2h3h2" path="res://Bondables/TreeBondable.tscn" id="10_3twjk"]
+[ext_resource type="PackedScene" uid="uid://bjbnrgu643euv" path="res://Bondables/SedanBondable.tscn" id="11_wsg6b"]
 [ext_resource type="PackedScene" uid="uid://bt68ofvjpg5on" path="res://Bondables/SledgehammerBondable.tscn" id="12_813s1"]
 [ext_resource type="PackedScene" uid="uid://srly24ne4qbu" path="res://Bondables/SodaCanBondable.tscn" id="13_ircpv"]
-[ext_resource type="PackedScene" uid="uid://dcoxhxkhclouf" path="res://Bondables/Sawmill2Bondable.tscn" id="14_il2sn"]
+[ext_resource type="PackedScene" uid="uid://bgte7yiq4rve3" path="res://Bondables/Sawmill2Bondable.tscn" id="14_il2sn"]
 [ext_resource type="PackedScene" uid="uid://d2fgxc3tt46rr" path="res://Bondables/AxeBondable.tscn" id="15_eais4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_q1ygs"]
@@ -40,21 +38,12 @@ data = PackedVector3Array(12.5, 0, 12.5, -12.5, 0, 12.5, 12.5, 0, -12.5, -12.5, 
 
 [node name="Node3D" type="Node3D" unique_id=1105875592]
 
-[node name="FollowingCamera" parent="." unique_id=1254128572 node_paths=PackedStringArray("follows_player") instance=ExtResource("1_ikbwe")]
-transform = Transform3D(1, 0, 0, 0, 0.701519, 0.7126508, 0, -0.7126508, 0.701519, 0, 5, 3.5)
-follows_player = NodePath("../BORDER/Building12/Building1")
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1329604182]
 environment = SubResource("Environment_5805k")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=373894240]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
-
-[node name="KatamariCharacter" parent="." unique_id=982810794 instance=ExtResource("2_wxtka")]
-process_mode = 3
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9285262, 0.5, 0)
-disable_mode = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=611145248]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
