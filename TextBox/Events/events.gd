@@ -23,5 +23,4 @@ func get_random_direction_3d() -> Vector3:
 	var z: float = randf_range(-100.0, 50.0)
 	
 	var random_vector: Vector3 = Vector3(x, y, z)
-	print(random_vector)
 	return random_vector.normalized()
