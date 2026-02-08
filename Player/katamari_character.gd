@@ -86,6 +86,7 @@ func _on_metal_passed() -> void:
 	for key in keys:
 		if amount_of_metal > key:
 			event = eventsToDo.get(key)
+			eventsToDo.erase(key)
 			break
 	
 	
@@ -99,3 +100,8 @@ func _on_metal_passed() -> void:
 	#dia_lab.dialogue_line = dialogue_line1
 	#dia_lab.type_out()
 	
+
+
+func _on_intro_timer_timeout() -> void:
+	var intro: EventAndDialogue = $IntroTextEvent
+	intro.trigger_event(global_position)

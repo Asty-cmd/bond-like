@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dqbxp0dvboswv" path="res://TextBox/Events/NationalAlertEvent.tscn" id="7_48028"]
 [ext_resource type="PackedScene" uid="uid://dgk5l6b5qj75h" path="res://TextBox/Events/UNGlobalAlertEvent.tscn" id="8_roqgn"]
 [ext_resource type="PackedScene" uid="uid://dulgnmee5510b" path="res://TextBox/Events/DroneWinEvent.tscn" id="9_qwevy"]
+[ext_resource type="PackedScene" uid="uid://dflnphgui326l" path="res://TextBox/Events/IntroTextEvent.tscn" id="10_48028"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_m78oy"]
 
@@ -51,5 +52,12 @@ shape = SubResource("SphereShape3D_ne567")
 wait_time = 3.0
 one_shot = true
 
+[node name="IntroTimer" type="Timer" parent="." unique_id=223320434]
+one_shot = true
+autostart = true
+
+[node name="IntroTextEvent" parent="." unique_id=414863817 instance=ExtResource("10_48028")]
+
 [connection signal="metal_passed" from="." to="." method="_on_metal_passed"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="IntroTimer" to="." method="_on_intro_timer_timeout"]
