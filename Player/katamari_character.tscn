@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://dranmigfu2481"]
 
 [ext_resource type="Script" uid="uid://bi435nkp55o4r" path="res://Player/katamari_character.gd" id="1_y526u"]
-[ext_resource type="Resource" uid="uid://dbyqr3vws7ysr" path="res://TextBox/TestTestDialogue.dialogue" id="2_ibhql"]
-[ext_resource type="PackedScene" uid="uid://dbeo7ixuqrj4p" path="res://TextBox/Events/MetroEvent.tscn" id="3_nlfrg"]
-[ext_resource type="PackedScene" uid="uid://bsbr3jc0jiym6" path="res://TextBox/Events/OfficerDownEvent.tscn" id="4_mvjkl"]
+[ext_resource type="PackedScene" uid="uid://ia5uo8c43lqb" path="res://TextBox/Events/Ch7NewsEvent.tscn" id="4_nlfrg"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_m78oy"]
 
@@ -13,13 +11,14 @@ points = PackedVector3Array(0.4578707, 0.19807906, 0.01578243, -0.48873997, -0.0
 [sub_resource type="SphereShape3D" id="SphereShape3D_ne567"]
 radius = 0.53882575
 
-[node name="KatamariCharacter" type="RigidBody3D" unique_id=982810794 node_paths=PackedStringArray("collisionKata", "eventsToDo")]
+[node name="KatamariCharacter" type="RigidBody3D" unique_id=982810794 node_paths=PackedStringArray("collisionKata")]
 can_sleep = false
 script = ExtResource("1_y526u")
 metal_modulo = 2
 collisionKata = [NodePath("CollisionShape3D2"), NodePath("Area3D/Area3dCollisionBody")]
-eventsToDo = [NodePath("MetroDownEvent")]
-actual_dialogue = Array[Resource]([ExtResource("2_ibhql"), null])
+eventsToDo = Dictionary[int, PackedScene]({
+2: ExtResource("4_nlfrg")
+})
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1518709879]
 mesh = SubResource("SphereMesh_m78oy")
@@ -33,10 +32,6 @@ monitorable = false
 
 [node name="Area3dCollisionBody" type="CollisionShape3D" parent="Area3D" unique_id=1379476863]
 shape = SubResource("SphereShape3D_ne567")
-
-[node name="MetroDownEvent" parent="." unique_id=414863817 instance=ExtResource("3_nlfrg")]
-
-[node name="OfficerDownEvent" parent="." unique_id=588065309 instance=ExtResource("4_mvjkl")]
 
 [connection signal="metal_passed" from="." to="." method="_on_metal_passed"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://c1yks4mk2g70a"]
+[gd_scene format=3 uid="uid://dulgnmee5510b"]
 
-[ext_resource type="Script" uid="uid://dlujf2isi806u" path="res://TextBox/Events/events.gd" id="1_wtm2c"]
+[ext_resource type="Script" uid="uid://dt5hpbqsd8xje" path="res://TextBox/Events/test_event.gd" id="1_wtm2c"]
 [ext_resource type="PackedScene" uid="uid://3iokii574bpu" path="res://Objects/Sedan.glb" id="2_oyppo"]
 [ext_resource type="Resource" uid="uid://dykdgviwwys2w" path="res://TextBox/MetroPD.dialogue" id="3_4op3h"]
 [ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/dialogue_label.gd" id="4_dv75c"]
@@ -23,22 +23,3 @@ pause_at_characters = ".?!-"
 skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
 seconds_per_pause_step = 0.5
 metadata/_custom_type_script = "uid://g32um0mltv5d"
-
-[node name="Control" type="Control" parent="." unique_id=1078946560]
-layout_mode = 3
-anchors_preset = 0
-offset_left = -434.0
-offset_top = 38.0
-offset_right = -394.0
-offset_bottom = 78.0
-
-[node name="ColorRect" type="ColorRect" parent="Control" unique_id=2092918108]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 437.0
-offset_top = 247.0
-offset_right = 824.0
-offset_bottom = 424.0
-color = Color(0.31353983, 0.044305496, 0.04352933, 1)

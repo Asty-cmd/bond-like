@@ -11,10 +11,9 @@ signal metal_passed
 
 @export var metal_modulo: int = 1
 @export var collisionKata: Array[CollisionShape3D]
-@export var eventsToDo: Array[EventAndDialogue]
+@export var eventsToDo: Dictionary[int, PackedScene]
 var event_idx: int = 0
 
-@export var actual_dialogue: Array[Resource]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -73,7 +72,16 @@ func _get_collision_shape_dube(col_shape: CollisionShape3D) -> CollisionShape3D:
 
 var test: bool = true
 func _on_metal_passed() -> void:
-	eventsToDo[event_idx].trigger_event(global_position + Vector3(0,5,0))
+	
+	
+	
+	var event = eventsToDo.get(amount_of_metal)
+	
+	if event:
+		var instcevent = event.instantiate()
+		add_child(instcevent)
+		instcevent.trigger_event(global_position + Vector3(0,5,0))
+	
 	#var dialogue_line1 = await DialogueManager.get_next_dialogue_line(actual_dialogue[0], "start")
 	#dia_lab.dialogue_line = dialogue_line1
 	#dia_lab.type_out()
