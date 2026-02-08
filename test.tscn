@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c47gwtddtmwk4"]
 
 [ext_resource type="PackedScene" uid="uid://dranmigfu2481" path="res://Player/katamari_character.tscn" id="1_37kl0"]
-[ext_resource type="PackedScene" uid="uid://bfxt4kq2knbl7" path="res://Bondables/TreeBondable.tscn" id="3_6uqi0"]
+[ext_resource type="PackedScene" path="res://Bondables/TreeBondable.tscn" id="3_6uqi0"]
 [ext_resource type="PackedScene" uid="uid://rbh3qbma7a83" path="res://Player/FollowingCamera.tscn" id="4_ppyta"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_37kl0"]
@@ -28,12 +28,21 @@ data = PackedVector3Array(12.5, 0, 12.5, -12.5, 0, 12.5, 12.5, 0, -12.5, -12.5, 
 
 [node name="Test" type="Node3D" unique_id=1928477106]
 
+[node name="FollowingCamera" parent="." unique_id=1254128572 node_paths=PackedStringArray("follows_player") instance=ExtResource("4_ppyta")]
+transform = Transform3D(1, 0, 0, 0, 0.701519, 0.7126508, 0, -0.7126508, 0.701519, 0, 5, 3.5)
+follows_player = NodePath("../KatamariCharacter")
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=556007659]
 environment = SubResource("Environment_6uqi0")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1679225565]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
+
+[node name="KatamariCharacter" parent="." unique_id=982810794 instance=ExtResource("1_37kl0")]
+process_mode = 3
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9285262, 0.5, 0)
+disable_mode = 2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=249213392]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
@@ -44,15 +53,6 @@ mesh = SubResource("PlaneMesh_mf4mk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=335491828]
 shape = SubResource("ConcavePolygonShape3D_37kl0")
-
-[node name="KatamariCharacter" parent="." unique_id=982810794 instance=ExtResource("1_37kl0")]
-process_mode = 3
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.928526, 0.5, 0)
-disable_mode = 2
-
-[node name="FollowingCamera" parent="." unique_id=1254128572 node_paths=PackedStringArray("follows_player") instance=ExtResource("4_ppyta")]
-transform = Transform3D(1, 0, 0, 0, 0.701519, 0.7126508, 0, -0.7126508, 0.701519, 0, 5, 3.5)
-follows_player = NodePath("../KatamariCharacter")
 
 [node name="TreeBondable" parent="." unique_id=33325230 instance=ExtResource("3_6uqi0")]
 transform = Transform3D(3.27, 0, 0, 0, 3.27, 0, 0, 0, 3.27, -2.6522188, 0.0019513071, 0.24608421)

@@ -12,6 +12,8 @@ size = Vector3(0.6575928, 0.6538086, 1.4647827)
 
 [node name="SledgehammerBondable" type="CharacterBody3D" unique_id=1269120917]
 script = ExtResource("1_uscl2")
+metal_given = 2.0
+minimum_metal_threshhold = 10.0
 
 [node name="Sledgehammer2" parent="." unique_id=1858982762 instance=ExtResource("1_45dyf")]
 

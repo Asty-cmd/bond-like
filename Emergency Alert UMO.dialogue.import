@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cdiec2fikjv6j"
+path="res://.godot/imported/Emergency Alert UMO.dialogue-f9bc48a54d6cc17d4fe9c16fff1bf612.tres"
+
+[deps]
+
+source_file="res://Emergency Alert UMO.dialogue"
+dest_files=["res://.godot/imported/Emergency Alert UMO.dialogue-f9bc48a54d6cc17d4fe9c16fff1bf612.tres"]
+
+[params]
+
+defaults=true

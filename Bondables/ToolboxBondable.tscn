@@ -11,6 +11,7 @@ size = Vector3(0.8814087, 0.44628906, 0.26068115)
 
 [node name="ToolboxBondable" type="CharacterBody3D" unique_id=33325230]
 script = ExtResource("1_tqvgf")
+metal_given = 3.0
 
 [node name="Toolbox2" parent="." unique_id=1280166649 instance=ExtResource("2_sklsc")]
 

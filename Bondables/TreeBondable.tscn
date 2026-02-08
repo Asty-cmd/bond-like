@@ -8,6 +8,7 @@ radius = 0.2
 
 [node name="TreeBondable" type="CharacterBody3D" unique_id=33325230]
 script = ExtResource("1_jhc6f")
+minimum_metal_threshhold = 100.0
 
 [node name="Tree2" parent="." unique_id=1793881616 instance=ExtResource("2_jhc6f")]
 

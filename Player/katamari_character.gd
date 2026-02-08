@@ -5,10 +5,11 @@ var input_dir: Vector2 = Vector2.ZERO
 var apply_imp: bool = false
 
 var amount_of_metal: int = 0
+var amount_of_objects: int = 0
 
 signal metal_passed
 
-
+@onready var Insufficient_Mass: PackedScene = preload("res://TextBox/not_enough_mass.tscn")
 @export var metal_modulo: int = 1
 @export var collisionKata: Array[CollisionShape3D]
 @export var eventsToDo: Dictionary[int, PackedScene]
@@ -41,17 +42,23 @@ var num: int = 0
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	
 	if body is SuperBondable:
+		print(body.minimum_metal_threshhold)
+		if body.minimum_metal_threshhold > amount_of_metal:
+			var textstuff = Insufficient_Mass.instantiate()
+			add_child(textstuff)
+			return
 		var dChildren = body.getColAndMesh()
 		for x in dChildren:
 			if x is not CollisionShape3D:
 				x.reparent(self)
 				for y in collisionKata: # THis is the player collision
-					y.scale += Vector3(0.1,0.1,0.1) * 0.15
-					$MeshInstance3D.scale += Vector3(0.1,0.1,0.1) * 0.1
+					y.scale += Vector3(0.1,0.1,0.1) * 0.2
+					$MeshInstance3D.scale += Vector3(0.1,0.1,0.1) * 0.15
 			else:
 				x.queue_free()
+		amount_of_metal += body.metal_given
 		body.queue_free()
-		amount_of_metal += 1
+
 	
 		if amount_of_metal % metal_modulo == 0:
 			metal_passed.emit()
@@ -76,10 +83,15 @@ func _get_collision_shape_dube(col_shape: CollisionShape3D) -> CollisionShape3D:
 
 var test: bool = true
 func _on_metal_passed() -> void:
+	var event = null
+	var keys = eventsToDo.keys()
+	for key in keys:
+		if amount_of_metal > key:
+			event = eventsToDo.get(key)
+			eventsToDo.erase(key)
+			break
 	
 	
-	
-	var event = eventsToDo.get(amount_of_metal)
 	
 	if event:
 		var instcevent = event.instantiate()
@@ -90,3 +102,8 @@ func _on_metal_passed() -> void:
 	#dia_lab.dialogue_line = dialogue_line1
 	#dia_lab.type_out()
 	
+
+
+func _on_intro_timer_timeout() -> void:
+	var intro: EventAndDialogue = $IntroTextEvent
+	intro.trigger_event(global_position)
