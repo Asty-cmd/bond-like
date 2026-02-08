@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://d3aa35iy83o75"]
+
+[ext_resource type="Script" uid="uid://be4g6m8juh27n" path="res://TextBox/not_enough_mass.gd" id="1_isnha"]
+
+[node name="Not Enough Mass" type="Control" unique_id=2026212305]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_isnha")
+
+[node name="Timer" type="Timer" parent="." unique_id=1015486595]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=925031463]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 956.0
+offset_top = 538.0
+offset_right = 1155.0
+offset_bottom = 656.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 0.2901961, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/normal_font_size = 24
+text = "Insufficient Mass"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -9,7 +9,7 @@ var amount_of_objects: int = 0
 
 signal metal_passed
 
-
+@onready var Insufficient_Mass: PackedScene = preload("res://TextBox/not_enough_mass.tscn")
 @export var metal_modulo: int = 1
 @export var collisionKata: Array[CollisionShape3D]
 @export var eventsToDo: Dictionary[int, PackedScene]
@@ -44,6 +44,8 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is SuperBondable:
 		print(body.minimum_metal_threshhold)
 		if body.minimum_metal_threshhold > amount_of_metal:
+			var textstuff = Insufficient_Mass.instantiate()
+			add_child(textstuff)
 			return
 		var dChildren = body.getColAndMesh()
 		for x in dChildren:
@@ -86,6 +88,7 @@ func _on_metal_passed() -> void:
 	for key in keys:
 		if amount_of_metal > key:
 			event = eventsToDo.get(key)
+			eventsToDo.erase(key)
 			break
 	
 	
@@ -99,3 +102,8 @@ func _on_metal_passed() -> void:
 	#dia_lab.dialogue_line = dialogue_line1
 	#dia_lab.type_out()
 	
+
+
+func _on_intro_timer_timeout() -> void:
+	var intro: EventAndDialogue = $IntroTextEvent
+	intro.trigger_event(global_position)

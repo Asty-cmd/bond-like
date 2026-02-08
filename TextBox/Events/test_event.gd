@@ -32,6 +32,8 @@ func trigger_event(location: Vector3):
 	for i in range(0,5):
 		var spot = get_random_direction_3d() * 20 
 		spot += location
+		if object_to_spawn == null:
+			return
 		var spawned_object = object_to_spawn.instantiate()
 
 		get_tree().root.add_child(spawned_object)

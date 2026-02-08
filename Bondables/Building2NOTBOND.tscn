@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c1cvfyr1t0uor"]
+
+[ext_resource type="PackedScene" uid="uid://cq5m88rik1sb4" path="res://Objects/Building2.glb" id="2_hy2ml"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_546xs"]
+size = Vector3(6.0200806, 20.022522, 6.0546875)
+
+[node name="BUILDINGNOTBOND2" type="StaticBody3D" unique_id=235280726]
+
+[node name="Building22" parent="." unique_id=756428655 instance=ExtResource("2_hy2ml")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=367744808]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00015258789, 9.998566, -0.005859375)
+shape = SubResource("BoxShape3D_546xs")

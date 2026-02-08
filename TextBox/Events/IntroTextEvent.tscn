@@ -6,6 +6,7 @@
 
 [node name="IntroTextEvent" type="Node3D" unique_id=414863817 node_paths=PackedStringArray("diag_lab")]
 script = ExtResource("1_h3ro7")
+object_to_spawn = null
 diag_lab = NodePath("DialogueLabel2")
 diag_text = ExtResource("3_h3ro7")
 metadata/_custom_type_script = "uid://dlujf2isi806u"
