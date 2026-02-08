@@ -5,7 +5,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_wln05"]
 size = Vector3(12.025391, 10.341644, 6.02063)
 
-[node name="Building4Bondable" type="StaticBody3D" unique_id=2122615348]
+[node name="BUILDINGNOTBOND4" type="StaticBody3D" unique_id=2122615348]
 
 [node name="Building42" parent="." unique_id=2072051629 instance=ExtResource("2_xpuu2")]
 

@@ -5,7 +5,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_546xs"]
 size = Vector3(6.0200806, 20.022522, 6.0546875)
 
-[node name="Building2Bondable" type="StaticBody3D" unique_id=235280726]
+[node name="BUILDINGNOTBOND2" type="StaticBody3D" unique_id=235280726]
 
 [node name="Building22" parent="." unique_id=756428655 instance=ExtResource("2_hy2ml")]
 
