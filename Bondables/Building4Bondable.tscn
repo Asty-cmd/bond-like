@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bdulwuaodojd7"]
+
+[ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_7wjbh"]
+[ext_resource type="PackedScene" uid="uid://c46lwo6woyvyk" path="res://Objects/Building4.glb" id="2_dqmnw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wln05"]
+size = Vector3(12.025391, 10.341644, 6.02063)
+
+[node name="Building4Bondable" type="CharacterBody3D" unique_id=528438817]
+script = ExtResource("1_7wjbh")
+
+[node name="Building42" parent="." unique_id=2072051629 instance=ExtResource("2_dqmnw")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=897881424]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.1536713, -0.0038452148)
+shape = SubResource("BoxShape3D_wln05")

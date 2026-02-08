@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://uwm7apbqobk0"]
+
+[ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_drh3l"]
+[ext_resource type="PackedScene" uid="uid://chlqido2y3h6t" path="res://Objects/Sawmill1.glb" id="2_vsiyw"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_drh3l"]
+height = 1.3312988
+radius = 0.39648438
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_vsiyw"]
+height = 2.4931946
+radius = 0.2553711
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_eftmo"]
+height = 2.096199
+radius = 0.22949219
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_frcqq"]
+height = 0.37780952
+radius = 0.16992188
+
+[node name="Sawmill1Bondable" type="CharacterBody3D" unique_id=1526310685]
+script = ExtResource("1_drh3l")
+
+[node name="Sawmill1" parent="." unique_id=1114452359 instance=ExtResource("2_vsiyw")]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="." unique_id=722973270]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+depth = 2.01
+polygon = PackedVector2Array(-1.1349484, -0.0019481182, -1.1312984, 1.9581071, -0.3903463, 1.954457, -0.38669634, 2.8669593, 1.6281086, 2.8633094, 1.6281086, 2.8633094, 1.6317588, -0.005597949)
+
+[node name="CollisionPolygon3D2" type="CollisionPolygon3D" parent="." unique_id=793366202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.705)
+depth = 0.895
+polygon = PackedVector2Array(-1.0221257, 1.9695532, 0.0035267472, 2.6959052, 1.0109293, 1.9659033)
+
+[node name="CollisionPolygon3D3" type="CollisionPolygon3D" parent="." unique_id=1374854618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.615)
+depth = 2.02
+polygon = PackedVector2Array(-1.0208232, 2.8558178, -0.0024706572, 3.9362206, 1.0268322, 2.859468)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=571245492]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2709517, 0.6446533, -0.2645991)
+shape = SubResource("CylinderShape3D_drh3l")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1581500556]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2709517, 2.5723114, -0.2645991)
+shape = SubResource("CylinderShape3D_vsiyw")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=1369498018]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6190624, 4.148182, -1.0987526)
+shape = SubResource("CylinderShape3D_eftmo")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="." unique_id=324290222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6190624, 5.318164, -1.0987526)
+shape = SubResource("CylinderShape3D_frcqq")
