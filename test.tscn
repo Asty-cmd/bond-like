@@ -4,11 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://dnt5hw3sb7k0u" path="res://Bondables/TestBondable.tscn" id="2_8uh7m"]
 [ext_resource type="PackedScene" uid="uid://bxo4sgl7myde7" path="res://Bondables/CylindricalBondable.tscn" id="3_6uqi0"]
 [ext_resource type="PackedScene" uid="uid://rbh3qbma7a83" path="res://Player/FollowingCamera.tscn" id="4_ppyta"]
-[ext_resource type="PackedScene" uid="uid://srly24ne4qbu" path="res://Bondables/SodaCanBondable.tscn" id="5_ykrsh"]
-[ext_resource type="PackedScene" uid="uid://ckqpvvqq4ux10" path="res://Bondables/AxeBondable.tscn" id="6_g14j6"]
+[ext_resource type="PackedScene" uid="uid://8ubl7jnfleph" path="res://TextBox/Events/TestEvent.tscn" id="5_ykrsh"]
+[ext_resource type="PackedScene" uid="uid://d2fgxc3tt46rr" path="res://Bondables/AxeBondable.tscn" id="6_g14j6"]
 [ext_resource type="PackedScene" uid="uid://cnfchxgtqp7bb" path="res://Bondables/SawbladeBondable.tscn" id="7_vbegm"]
 [ext_resource type="PackedScene" uid="uid://bt68ofvjpg5on" path="res://Bondables/SledgehammerBondable.tscn" id="8_ehkex"]
 [ext_resource type="PackedScene" uid="uid://di3ksk7bcdfo1" path="res://Bondables/ToolboxBondable.tscn" id="9_xersf"]
+[ext_resource type="PackedScene" uid="uid://srly24ne4qbu" path="res://Bondables/SodaCanBondable.tscn" id="10_00tp4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_37kl0"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -49,7 +50,7 @@ shape = SubResource("ConcavePolygonShape3D_37kl0")
 
 [node name="KatamariCharacter" parent="." unique_id=982810794 instance=ExtResource("1_37kl0")]
 process_mode = 3
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.928526, 0.5, 0)
 disable_mode = 2
 
 [node name="TestBondable" parent="." unique_id=874704867 instance=ExtResource("2_8uh7m")]
@@ -67,6 +68,8 @@ follows_player = NodePath("../KatamariCharacter")
 
 [node name="SodaCanBondable" parent="." unique_id=1860948381 instance=ExtResource("5_ykrsh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.8170815, 9.536743e-07, -4.764777)
+object_to_spawn = Object(CharacterBody3D,"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"disable_mode":0,"collision_layer":1,"collision_mask":1,"collision_priority":1.0,"input_ray_pickable":true,"input_capture_on_drag":false,"axis_lock_linear_x":false,"axis_lock_linear_y":false,"axis_lock_linear_z":false,"axis_lock_angular_x":false,"axis_lock_angular_y":false,"axis_lock_angular_z":false,"motion_mode":0,"up_direction":Vector3(0, 1, 0),"slide_on_ceiling":true,"velocity":Vector3(0, 0, 0),"max_slides":6,"wall_min_slide_angle":0.2617994,"floor_stop_on_slope":true,"floor_constant_speed":false,"floor_block_on_wall":true,"floor_max_angle":0.7853982,"floor_snap_length":0.1,"platform_on_leave":0,"platform_floor_layers":4294967295,"platform_wall_layers":0,"safe_margin":0.001,"script":Resource("res://Bondables/super_bondable.gd"),"metal_given":1.0,"metadata/_custom_type_script":"uid://f0r8i1y2l24v")
+
 
 [node name="AxeBondable" parent="." unique_id=2145442276 instance=ExtResource("6_g14j6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2759724, 0.35588953, -13.659884)
@@ -79,3 +82,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6362243, 0.30935597, -3.69
 
 [node name="ToolboxBondable" parent="." unique_id=33325230 instance=ExtResource("9_xersf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.413695, 0.04548061, 1.8577929)
+
+[node name="TestEvent" parent="." unique_id=1593292576 instance=ExtResource("5_ykrsh")]
+object_to_spawn = Object(CharacterBody3D,"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":0,"auto_translate_mode":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"disable_mode":0,"collision_layer":1,"collision_mask":1,"collision_priority":1.0,"input_ray_pickable":true,"input_capture_on_drag":false,"axis_lock_linear_x":false,"axis_lock_linear_y":false,"axis_lock_linear_z":false,"axis_lock_angular_x":false,"axis_lock_angular_y":false,"axis_lock_angular_z":false,"motion_mode":0,"up_direction":Vector3(0, 1, 0),"slide_on_ceiling":true,"velocity":Vector3(0, 0, 0),"max_slides":6,"wall_min_slide_angle":0.2617994,"floor_stop_on_slope":true,"floor_constant_speed":false,"floor_block_on_wall":true,"floor_max_angle":0.7853982,"floor_snap_length":0.1,"platform_on_leave":0,"platform_floor_layers":4294967295,"platform_wall_layers":0,"safe_margin":0.001,"script":Resource("res://Bondables/super_bondable.gd"),"metal_given":1.0,"metadata/_custom_type_script":"uid://f0r8i1y2l24v")
+
+
+[node name="SodaCanBondable2" parent="." unique_id=1357732953 instance=ExtResource("10_00tp4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3226051, 2.5336375, -8.111758)

@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bi435nkp55o4r" path="res://Player/katamari_character.gd" id="1_y526u"]
 [ext_resource type="Resource" uid="uid://dbyqr3vws7ysr" path="res://TextBox/TestTestDialogue.dialogue" id="2_ibhql"]
-[ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/dialogue_label.gd" id="2_y526u"]
+[ext_resource type="PackedScene" uid="uid://8ubl7jnfleph" path="res://TextBox/Events/TestEvent.tscn" id="4_nlfrg"]
+[ext_resource type="PackedScene" uid="uid://srly24ne4qbu" path="res://Bondables/SodaCanBondable.tscn" id="5_mvjkl"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_m78oy"]
 
@@ -15,6 +16,7 @@ radius = 0.53882575
 [node name="KatamariCharacter" type="RigidBody3D" unique_id=982810794 node_paths=PackedStringArray("collisionKata")]
 can_sleep = false
 script = ExtResource("1_y526u")
+metal_modulo = 2
 collisionKata = [NodePath("CollisionShape3D2"), NodePath("Area3D/Area3dCollisionBody")]
 actual_dialogue = Array[Resource]([ExtResource("2_ibhql"), null])
 
@@ -31,33 +33,8 @@ monitorable = false
 [node name="Area3dCollisionBody" type="CollisionShape3D" parent="Area3D" unique_id=1379476863]
 shape = SubResource("SphereShape3D_ne567")
 
-[node name="DialogueLabel" type="RichTextLabel" parent="." unique_id=560314460]
-offset_left = -437.0
-offset_top = 266.0
-offset_right = 437.0
-offset_bottom = 435.0
-script = ExtResource("2_y526u")
-pause_at_characters = ".?!-"
-skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
-seconds_per_pause_step = 0.5
-metadata/_custom_type_script = "uid://g32um0mltv5d"
-
-[node name="Control" type="Control" parent="." unique_id=206846099]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="ColorRect" type="ColorRect" parent="Control" unique_id=2135455366]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -450.0
-offset_top = 255.0
-offset_right = 432.0
-offset_bottom = 432.0
-color = Color(0.31353983, 0.044305496, 0.04352933, 1)
+[node name="TestEvent" parent="." unique_id=1593292576 instance=ExtResource("4_nlfrg")]
+object_to_spawn = ExtResource("5_mvjkl")
 
 [connection signal="metal_passed" from="." to="." method="_on_metal_passed"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

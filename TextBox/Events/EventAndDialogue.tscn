@@ -2,10 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dlujf2isi806u" path="res://TextBox/Events/events.gd" id="1_yfv8b"]
 [ext_resource type="Resource" uid="uid://dykdgviwwys2w" path="res://TextBox/MetroPD.dialogue" id="2_06p00"]
+[ext_resource type="PackedScene" uid="uid://bxo4sgl7myde7" path="res://Bondables/CylindricalBondable.tscn" id="2_p448v"]
 [ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/dialogue_label.gd" id="2_vife6"]
 
 [node name="EventAndDialogue" type="Node3D" unique_id=1459734164 node_paths=PackedStringArray("diag_lab")]
 script = ExtResource("1_yfv8b")
+object_to_spawn = ExtResource("2_p448v")
 diag_lab = NodePath("DialogueLabel")
 diag_text = ExtResource("2_06p00")
 

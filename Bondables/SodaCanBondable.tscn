@@ -8,6 +8,8 @@ height = 1.4633179
 radius = 0.472
 
 [node name="SodaCanBondable" type="CharacterBody3D" unique_id=1860948381]
+process_mode = 3
+disable_mode = 2
 script = ExtResource("1_hrk40")
 
 [node name="SodaCan" parent="." unique_id=820365063 instance=ExtResource("2_kygf1")]

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ckqpvvqq4ux10"]
+[gd_scene format=3 uid="uid://d2fgxc3tt46rr"]
 
 [ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_f0cvo"]
 [ext_resource type="PackedScene" uid="uid://brn1vi8vda21f" path="res://Objects/Axe.glb" id="2_27aky"]
@@ -6,6 +6,9 @@
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_bkc66"]
 height = 9.930664
 radius = 0.285
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ouakg"]
+size = Vector3(3.7714844, 0.40454102, 1)
 
 [node name="AxeBondable" type="CharacterBody3D" unique_id=2145442276]
 script = ExtResource("1_f0cvo")
@@ -16,7 +19,6 @@ script = ExtResource("1_f0cvo")
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -1.6795161e-07, 3.8422852)
 shape = SubResource("CylinderShape3D_bkc66")
 
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="." unique_id=2103487312]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.18844986, 0, -1.0020013)
-depth = 0.175
-polygon = PackedVector2Array(-1.003159, 0.0012513399, 2.2360296, -0.006629944, 2.2468963, 2.0005174, 0.25294316, 0.597657, -1.0070996, 0.5884038)
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1497195728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5157765, 0, -1.1255354)
+shape = SubResource("BoxShape3D_ouakg")
