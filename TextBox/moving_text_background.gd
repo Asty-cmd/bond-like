@@ -9,6 +9,9 @@ func _ready() -> void:
 func play():
 	anim_player.play("move_right")
 
+func reset():
+	anim_player.play("RESET")
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass

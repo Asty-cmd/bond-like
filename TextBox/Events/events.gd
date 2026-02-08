@@ -5,13 +5,12 @@ class_name EventAndDialogue
 @export var diag_lab: DialogueLabel
 @export var diag_text: Resource
 
-@export var moving_text: Control
 
 var called_already: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 func trigger_event(location: Vector3):
