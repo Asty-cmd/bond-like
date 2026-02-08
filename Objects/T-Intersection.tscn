@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dk6n2l0x2jskd"]
+
+[ext_resource type="PackedScene" uid="uid://dpe3puy886x3j" path="res://Objects/T-Intersection.glb" id="1_02plx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yery7"]
+size = Vector3(9, 0.2, 9)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tao7u"]
+size = Vector3(1.5, 0.4, 9)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lqdqb"]
+size = Vector3(1.5, 0.4, 1.5)
+
+[node name="T-Intersection" type="StaticBody3D" unique_id=1713138617]
+
+[node name="T-Intersection2" parent="." unique_id=1012520706 instance=ExtResource("1_02plx")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2032324563]
+shape = SubResource("BoxShape3D_yery7")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=1026155580]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75, 0.1, 0)
+shape = SubResource("BoxShape3D_tao7u")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="." unique_id=1774427995]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.75, 0.1, 3.75)
+shape = SubResource("BoxShape3D_lqdqb")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="." unique_id=1820266540]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.75, 0.1, -3.75)
+shape = SubResource("BoxShape3D_lqdqb")
