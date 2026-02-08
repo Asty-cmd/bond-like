@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dflnphgui326l"]
+[gd_scene format=3 uid="uid://ho15yynwmnfv"]
 
 [ext_resource type="Script" uid="uid://dt5hpbqsd8xje" path="res://TextBox/Events/test_event.gd" id="1_h3ro7"]
 [ext_resource type="Resource" uid="uid://bq05a2v57rvtu" path="res://TextBox/Narrator.dialogue" id="3_h3ro7"]
