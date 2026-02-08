@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://cnnemgvta018q"]
+[gd_scene format=3 uid="uid://db2oerxeiy5ld"]
 
 [ext_resource type="Script" uid="uid://dt5hpbqsd8xje" path="res://TextBox/Events/test_event.gd" id="1_mh7cc"]
-[ext_resource type="PackedScene" uid="uid://3iokii574bpu" path="res://Objects/Sedan.glb" id="2_b5yvt"]
+[ext_resource type="PackedScene" uid="uid://bvebm7s5pn7el" path="res://Bondables/Building1Bondable.tscn" id="2_mh7cc"]
 [ext_resource type="Resource" uid="uid://cbtvqr5hacs37" path="res://Channel 10 News.dialogue" id="3_mh7cc"]
 [ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/dialogue_label.gd" id="4_lcj06"]
 
 [node name="Channel10Event" type="Node3D" unique_id=414863817 node_paths=PackedStringArray("diag_lab")]
 script = ExtResource("1_mh7cc")
-object_to_spawn = ExtResource("2_b5yvt")
+object_to_spawn = ExtResource("2_mh7cc")
 diag_lab = NodePath("DialogueLabel2")
 diag_text = ExtResource("3_mh7cc")
 metadata/_custom_type_script = "uid://dlujf2isi806u"

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dwvd8w2q2uson"]
+[gd_scene format=3 uid="uid://b2el5o2rqla7s"]
 
 [ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_8csgg"]
 [ext_resource type="PackedScene" uid="uid://cq5m88rik1sb4" path="res://Objects/Building2.glb" id="2_b8wqc"]
@@ -8,6 +8,8 @@ size = Vector3(6.0200806, 20.022522, 6.0546875)
 
 [node name="Building2Bondable" type="CharacterBody3D" unique_id=1938894608]
 script = ExtResource("1_8csgg")
+metal_given = 240.0
+minimum_metal_threshhold = 500.0
 
 [node name="Building22" parent="." unique_id=756428655 instance=ExtResource("2_b8wqc")]
 

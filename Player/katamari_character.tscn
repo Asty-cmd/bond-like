@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://dranmigfu2481"]
 
 [ext_resource type="Script" uid="uid://bi435nkp55o4r" path="res://Player/katamari_character.gd" id="1_y526u"]
-[ext_resource type="PackedScene" uid="uid://dbeo7ixuqrj4p" path="res://TextBox/Events/MetroEvent.tscn" id="3_nlfrg"]
+[ext_resource type="PackedScene" uid="uid://bevu0goj8snkx" path="res://Bondables/PoliceCarBondable.tscn" id="2_qwevy"]
 [ext_resource type="PackedScene" uid="uid://bsbr3jc0jiym6" path="res://TextBox/Events/OfficerDownEvent.tscn" id="4_mvjkl"]
 [ext_resource type="PackedScene" uid="uid://ia5uo8c43lqb" path="res://TextBox/Events/Ch7NewsEvent.tscn" id="4_nlfrg"]
-[ext_resource type="PackedScene" uid="uid://cnnemgvta018q" path="res://TextBox/Events/Channel10Event.tscn" id="5_2bw8v"]
-[ext_resource type="PackedScene" uid="uid://doqxnaaoq35uw" path="res://TextBox/Events/UMOAlertEvent.tscn" id="6_qwevy"]
-[ext_resource type="PackedScene" uid="uid://dqbxp0dvboswv" path="res://TextBox/Events/NationalAlertEvent.tscn" id="7_48028"]
-[ext_resource type="PackedScene" uid="uid://dgk5l6b5qj75h" path="res://TextBox/Events/UNGlobalAlertEvent.tscn" id="8_roqgn"]
-[ext_resource type="PackedScene" uid="uid://dulgnmee5510b" path="res://TextBox/Events/DroneWinEvent.tscn" id="9_qwevy"]
+[ext_resource type="PackedScene" uid="uid://db2oerxeiy5ld" path="res://TextBox/Events/Channel10Event.tscn" id="5_2bw8v"]
+[ext_resource type="PackedScene" uid="uid://pgipvqmhm634" path="res://TextBox/Events/UMOAlertEvent.tscn" id="6_qwevy"]
+[ext_resource type="PackedScene" uid="uid://dh4g51l2hn17a" path="res://TextBox/Events/NationalAlertEvent.tscn" id="7_48028"]
+[ext_resource type="PackedScene" uid="uid://b42uep671b75e" path="res://TextBox/Events/UNGlobalAlertEvent.tscn" id="8_roqgn"]
+[ext_resource type="PackedScene" uid="uid://c1yks4mk2g70a" path="res://TextBox/Events/DroneWinEvent.tscn" id="9_qwevy"]
+[ext_resource type="PackedScene" uid="uid://ckqpvvqq4ux10" path="res://Bondables/AxeBondable.tscn" id="10_48028"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_m78oy"]
 
@@ -24,7 +25,8 @@ script = ExtResource("1_y526u")
 metal_modulo = 2
 collisionKata = [NodePath("CollisionShape3D2"), NodePath("Area3D/Area3dCollisionBody")]
 eventsToDo = Dictionary[int, PackedScene]({
-10: ExtResource("3_nlfrg"),
+0: ExtResource("10_48028"),
+10: ExtResource("2_qwevy"),
 20: ExtResource("4_mvjkl"),
 40: ExtResource("4_nlfrg"),
 100: ExtResource("5_2bw8v"),

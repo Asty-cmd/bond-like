@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cybu3s18jrmgv"]
+[gd_scene format=3 uid="uid://bjbnrgu643euv"]
 
 [ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_21u7k"]
 [ext_resource type="PackedScene" uid="uid://3iokii574bpu" path="res://Objects/Sedan.glb" id="2_jbh6b"]
@@ -8,6 +8,8 @@ size = Vector3(5.3067017, 2.4613647, 1)
 
 [node name="SedanBondble" type="CharacterBody3D" unique_id=1894229199]
 script = ExtResource("1_21u7k")
+metal_given = 12.0
+minimum_metal_threshhold = 10.0
 
 [node name="Sedan2" parent="." unique_id=1812336909 instance=ExtResource("2_jbh6b")]
 

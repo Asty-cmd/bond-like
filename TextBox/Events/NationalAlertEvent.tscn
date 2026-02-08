@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://dh4g51l2hn17a"]
 
 [ext_resource type="Script" uid="uid://dt5hpbqsd8xje" path="res://TextBox/Events/test_event.gd" id="1_eqgwc"]
-[ext_resource type="PackedScene" uid="uid://3iokii574bpu" path="res://Objects/Sedan.glb" id="2_gnbt7"]
+[ext_resource type="PackedScene" uid="uid://b2el5o2rqla7s" path="res://Bondables/Building2Bondable.tscn" id="2_eqgwc"]
 [ext_resource type="Resource" uid="uid://clx8jbyjqtajb" path="res://TextBox/National Emergency Alert.dialogue" id="3_eqgwc"]
 [ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/dialogue_label.gd" id="4_lsao8"]
 
 [node name="NationAlertEvent" type="Node3D" unique_id=414863817 node_paths=PackedStringArray("diag_lab")]
 script = ExtResource("1_eqgwc")
-object_to_spawn = ExtResource("2_gnbt7")
+object_to_spawn = ExtResource("2_eqgwc")
 diag_lab = NodePath("DialogueLabel2")
 diag_text = ExtResource("3_eqgwc")
 metadata/_custom_type_script = "uid://dlujf2isi806u"
