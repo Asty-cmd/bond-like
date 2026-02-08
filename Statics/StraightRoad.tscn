@@ -5,3 +5,4 @@
 [node name="StraightRoad" type="Node3D" unique_id=2118272548]
 
 [node name="StraightRoad" parent="." unique_id=1362253057 instance=ExtResource("1_ekxoy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.10621226, 0)
