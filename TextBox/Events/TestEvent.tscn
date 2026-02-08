@@ -6,13 +6,37 @@
 
 [node name="TestEvent" type="Node3D" unique_id=1593292576 node_paths=PackedStringArray("diag_lab")]
 script = ExtResource("1_mskk4")
-diag_lab = NodePath("DialogueLabel")
+diag_lab = NodePath("DialogueLabel2")
 diag_text = ExtResource("2_iicnq")
 metadata/_custom_type_script = "uid://dlujf2isi806u"
 
-[node name="DialogueLabel" type="RichTextLabel" parent="." unique_id=1287761534]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="DialogueLabel2" type="RichTextLabel" parent="." unique_id=1076181317]
+z_index = 1
+offset_left = 10.0
+offset_top = 294.0
+offset_right = 402.0
+offset_bottom = 463.0
 script = ExtResource("4_3duw3")
+pause_at_characters = ".?!-"
 skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
+seconds_per_pause_step = 0.5
 metadata/_custom_type_script = "uid://g32um0mltv5d"
+
+[node name="Control" type="Control" parent="." unique_id=141728900]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -434.0
+offset_top = 38.0
+offset_right = -394.0
+offset_bottom = 78.0
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1947050982]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 437.0
+offset_top = 247.0
+offset_right = 824.0
+offset_bottom = 424.0
+color = Color(0.31353983, 0.044305496, 0.04352933, 1)

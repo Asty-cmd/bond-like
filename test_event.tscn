@@ -3,21 +3,10 @@
 [ext_resource type="Script" uid="uid://dt5hpbqsd8xje" path="res://TextBox/Events/test_event.gd" id="1_11drr"]
 [ext_resource type="Resource" uid="uid://dykdgviwwys2w" path="res://TextBox/MetroPD.dialogue" id="2_48r5j"]
 [ext_resource type="PackedScene" uid="uid://srly24ne4qbu" path="res://Bondables/SodaCanBondable.tscn" id="2_kwxi5"]
-[ext_resource type="PackedScene" uid="uid://bxo4sgl7myde7" path="res://Bondables/CylindricalBondable.tscn" id="3_kwxi5"]
-[ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/dialogue_label.gd" id="4_s74rv"]
 
 [node name="TestEvent" type="Node3D" unique_id=1593292576 node_paths=PackedStringArray("diag_lab")]
 script = ExtResource("1_11drr")
 object_to_spawn = ExtResource("2_kwxi5")
-diag_lab = NodePath("DialogueLabel")
+diag_lab = NodePath("")
 diag_text = ExtResource("2_48r5j")
 metadata/_custom_type_script = "uid://dlujf2isi806u"
-
-[node name="CylindricalBondable" parent="." unique_id=863201554 instance=ExtResource("3_kwxi5")]
-
-[node name="DialogueLabel" type="RichTextLabel" parent="." unique_id=1287761534]
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("4_s74rv")
-skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
-metadata/_custom_type_script = "uid://g32um0mltv5d"
