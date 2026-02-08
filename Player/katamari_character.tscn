@@ -38,5 +38,9 @@ script = ExtResource("2_y526u")
 skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
 metadata/_custom_type_script = "uid://g32um0mltv5d"
 
+[node name="JumpTimer" type="Timer" parent="." unique_id=674158244]
+wait_time = 3.0
+one_shot = true
+
 [connection signal="metal_passed" from="." to="." method="_on_metal_passed"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://375tl518h25w"]
+
+[ext_resource type="PackedScene" uid="uid://b161ty8fltu15" path="res://Objects/StraightRoad.glb" id="1_ekxoy"]
+
+[node name="StraightRoad" type="Node3D" unique_id=2118272548]
+
+[node name="StraightRoad" parent="." unique_id=1362253057 instance=ExtResource("1_ekxoy")]

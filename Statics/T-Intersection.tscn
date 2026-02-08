@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://qj2inoh70jdf"]
+
+[ext_resource type="PackedScene" uid="uid://dpe3puy886x3j" path="res://Objects/T-Intersection.glb" id="1_dguwk"]
+
+[node name="StraightRoad" type="Node3D" unique_id=2118272548]
+
+[node name="T-Intersection" parent="." unique_id=1338056697 instance=ExtResource("1_dguwk")]

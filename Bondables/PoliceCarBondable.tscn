@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b43hbq7eufkb7"]
+
+[ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_dmkxo"]
+[ext_resource type="PackedScene" uid="uid://coudg83p88hcb" path="res://Objects/PoliceCar.glb" id="2_dmkxo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4l14u"]
+size = Vector3(2.684, 5.295, 2.55)
+
+[node name="PoliceCarBondable" type="CharacterBody3D" unique_id=1269120917]
+script = ExtResource("1_dmkxo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1166943229]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -0.019897472, 1.2857065, 0)
+shape = SubResource("BoxShape3D_4l14u")
+
+[node name="PoliceCar" parent="." unique_id=1215701655 instance=ExtResource("2_dmkxo")]

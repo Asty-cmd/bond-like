@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c1uk8q6ie3wxx"]
+
+[ext_resource type="PackedScene" uid="uid://d6ralufdc4r6" path="res://Objects/Corner.glb" id="1_g86lc"]
+
+[node name="CornerRoad" type="Node3D" unique_id=2118272548]
+
+[node name="Corner" parent="." unique_id=1874183945 instance=ExtResource("1_g86lc")]
