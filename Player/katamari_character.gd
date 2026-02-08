@@ -5,6 +5,7 @@ var input_dir: Vector2 = Vector2.ZERO
 var apply_imp: bool = false
 
 var amount_of_metal: int = 0
+var amount_of_objects: int = 0
 
 signal metal_passed
 
@@ -41,17 +42,21 @@ var num: int = 0
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	
 	if body is SuperBondable:
+		print(body.minimum_metal_threshhold)
+		if body.minimum_metal_threshhold > amount_of_metal:
+			return
 		var dChildren = body.getColAndMesh()
 		for x in dChildren:
 			if x is not CollisionShape3D:
 				x.reparent(self)
 				for y in collisionKata: # THis is the player collision
-					y.scale += Vector3(0.1,0.1,0.1) * 0.15
-					$MeshInstance3D.scale += Vector3(0.1,0.1,0.1) * 0.1
+					y.scale += Vector3(0.1,0.1,0.1) * 0.2
+					$MeshInstance3D.scale += Vector3(0.1,0.1,0.1) * 0.15
 			else:
 				x.queue_free()
+		amount_of_metal += body.metal_given
 		body.queue_free()
-		amount_of_metal += 1
+
 	
 		if amount_of_metal % metal_modulo == 0:
 			metal_passed.emit()

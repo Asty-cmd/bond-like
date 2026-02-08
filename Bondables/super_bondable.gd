@@ -2,7 +2,7 @@ extends CharacterBody3D
 class_name SuperBondable
 
 @export var metal_given: float = 1.0
-
+@export var minimum_metal_threshhold = 0.0
 var node3dChildren: Array[Node3D]
 
 func _ready() -> void:

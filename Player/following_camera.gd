@@ -8,4 +8,5 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	global_position = follows_player.global_position + Vector3(0,2,2) * ((follows_player.amount_of_metal * 0.05)+1)
+	if follows_player != null:
+		global_position = follows_player.global_position + Vector3(0,12,12) * ((follows_player.amount_of_metal * 0.1)+1)
