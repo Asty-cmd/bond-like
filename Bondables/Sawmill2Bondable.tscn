@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dcoxhxkhclouf"]
+
+[ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_6nh8m"]
+[ext_resource type="PackedScene" uid="uid://byujyl0xqq4ly" path="res://Objects/Sawmill2.glb" id="2_6xprl"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_6nh8m"]
+height = 1.354248
+radius = 0.6645508
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_6xprl"]
+height = 3.4993896
+radius = 0.2685547
+
+[node name="Sawmill2Bondable" type="CharacterBody3D" unique_id=1189074414]
+script = ExtResource("1_6nh8m")
+
+[node name="Sawmill2" parent="." unique_id=2030673968 instance=ExtResource("2_6xprl")]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="." unique_id=884181642]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.6263878)
+depth = 2.785
+polygon = PackedVector2Array(-1.0051796, 2.0492172, -0.00045914203, 2.7285943, 1.0027874, 2.0512319, 1.0101967, -0.004425794, -1.0120983, -0.02276215)
+
+[node name="CollisionPolygon3D2" type="CollisionPolygon3D" parent="." unique_id=318148560]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.018500209, -0.002176459, -0.62255037)
+depth = 2.035
+polygon = PackedVector2Array(-0.0018335283, 3.905841, 0.9848964, 2.8953164, 0.9894072, -0.003467788, -1.0224903, -0.020867705, -1.0259068, 2.8931253)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1096086105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2683052, 0.6368408, -0.2625087)
+shape = SubResource("CylinderShape3D_6nh8m")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1136719958]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3499173, 3.0632124, 0.0681774)
+shape = SubResource("CylinderShape3D_6xprl")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=1030354233]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3499173, 3.0632124, -0.6164692)
+shape = SubResource("CylinderShape3D_6xprl")

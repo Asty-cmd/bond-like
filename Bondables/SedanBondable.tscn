@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cybu3s18jrmgv"]
+
+[ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_21u7k"]
+[ext_resource type="PackedScene" uid="uid://3iokii574bpu" path="res://Objects/Sedan.glb" id="2_jbh6b"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_chayy"]
+size = Vector3(5.3067017, 2.4613647, 1)
+
+[node name="SedanBondble" type="CharacterBody3D" unique_id=1894229199]
+script = ExtResource("1_21u7k")
+
+[node name="Sedan2" parent="." unique_id=1812336909 instance=ExtResource("2_jbh6b")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2071674988]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0059509277, 1.2223206, 0)
+shape = SubResource("BoxShape3D_chayy")
