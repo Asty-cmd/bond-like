@@ -1,6 +1,14 @@
 [gd_scene format=3 uid="uid://rbh3qbma7a83"]
 
-[ext_resource type="Script" uid="uid://b16csg0tscy8u" path="res://Player/following_camera.gd" id="1_ar0pr"]
+[ext_resource type="Script" uid="uid://dckbccc5opwgp" path="res://Player/MouseCamera.gd" id="1_ar0pr"]
 
-[node name="FollowingCamera" type="Camera3D" unique_id=1254128572]
+[node name="FollowingCamera" type="Node3D" unique_id=1668414202 node_paths=PackedStringArray("character", "head")]
 script = ExtResource("1_ar0pr")
+character = NodePath(".")
+head = NodePath("Head")
+
+[node name="Head" type="Node3D" parent="." unique_id=1105963105]
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1523188119]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.3752203)
