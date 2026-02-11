@@ -9,8 +9,7 @@ var amount_of_objects: int = 0
 
 signal metal_passed
 
-@onready var Insufficient_Mass: PackedScene = preload("res://TextBox/not_enough_mass.tscn")
-@export var metal_modulo: int = 1
+@onready var Insufficient_Mass: PackedScene = preload("res://TextBox/InsufficientMassText.tscn")
 @export var collisionKata: Array[CollisionShape3D]
 @export var eventsToDo: Dictionary[int, PackedScene]
 var event_idx: int = 0
@@ -26,6 +25,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	input_dir = Input.get_vector("left", "right", "forward", "backward")
 	if input_dir:
+		var camera := get_viewport().get_camera_3d()
+		var cam_basis := camera.global_transform.basis
+		var cam_forward := -cam_basis.z
+		var forward_xz := Vector3(cam_forward.x, 0, cam_forward.z).normalized()
+		var right_xz := Vector3(cam_basis.x.x, 0, cam_basis.x.z).normalized()
+		direction = (forward_xz * (-input_dir.y) + right_xz * input_dir.x).normalized()
 	
 	if Input.is_action_just_pressed("jump") and $JumpTimer.is_stopped():
 		linear_velocity += Vector3(0, 10, 0)
@@ -39,28 +44,29 @@ var num: int = 0
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	
-	if body is SuperBondable:
-		print(body.minimum_metal_threshhold)
-		if body.minimum_metal_threshhold > amount_of_metal:
-			var textstuff = Insufficient_Mass.instantiate()
-			add_child(textstuff)
-			return
-		var dChildren = body.getColAndMesh()
-		for x in dChildren:
-			if x is not CollisionShape3D and x is not CollisionPolygon3D:
-				x.reparent(self)
-				for y in collisionKata: # THis is the player collision
-					y.scale += Vector3(0.1,0.1,0.1) * 0.2
-					character_mesh.scale += Vector3(0.1,0.1,0.1) * 0.15
-			else:
-				x.queue_free()
-		amount_of_metal += body.metal_given
-		body.queue_free()
+	if body is SuperBondableCharacter:
+		_bond_object(body.metal_given, body.minimum_metal_threshhold, body.getColAndMesh(), body)
+	elif body is SuperBondableStatic:
+		_bond_object(body.metal_given, body.minimum_metal_threshhold, body.getColAndMesh(), body)
 
-	
-		if amount_of_metal % metal_modulo == 0:
-			metal_passed.emit()
+func _bond_object(metal_given: float, threshold: float, children: Array[Node3D], body: Node3D) -> void:
+	print(threshold)
+	if threshold > amount_of_metal:
+		var textstuff = Insufficient_Mass.instantiate()
+		add_child(textstuff)
+		return
+	for x in children:
+		if x is not CollisionShape3D and x is not CollisionPolygon3D:
+			x.reparent(self)
+			for y in collisionKata: # THis is the player collision
+				y.scale += Vector3(0.1,0.1,0.1) * 0.2
+				character_mesh.scale += Vector3(0.1,0.1,0.1) * 0.15
+		else:
+			x.queue_free()
+	amount_of_metal += metal_given
+	body.queue_free()
+
+	metal_passed.emit()
 			
 
 			
@@ -104,5 +110,5 @@ func _on_metal_passed() -> void:
 
 
 func _on_intro_timer_timeout() -> void:
-	var intro: EventAndDialogue = $IntroTextEvent
+	var intro: GameEvent = $IntroTextEvent
 	intro.trigger_event(global_position)
