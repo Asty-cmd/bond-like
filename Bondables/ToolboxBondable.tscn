@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://di3ksk7bcdfo1"]
 
-[ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_tqvgf"]
+[ext_resource type="Script" uid="uid://bbhar7rubyjj8" path="res://Bondables/SuperBondableCharacter.gd" id="1_tqvgf"]
 [ext_resource type="PackedScene" uid="uid://bb0ghvrv0nti8" path="res://Objects/Toolbox.glb" id="2_sklsc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cw3vd"]

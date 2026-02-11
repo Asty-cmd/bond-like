@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cnfchxgtqp7bb"]
 
-[ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_xiuq3"]
+[ext_resource type="Script" uid="uid://bbhar7rubyjj8" path="res://Bondables/SuperBondableCharacter.gd" id="1_xiuq3"]
 [ext_resource type="PackedScene" uid="uid://kmh8vr22pwxk" path="res://Objects/Sawblade.glb" id="2_q847h"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_uy5hr"]

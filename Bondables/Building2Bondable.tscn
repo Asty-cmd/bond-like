@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://b2el5o2rqla7s"]
 
-[ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_8csgg"]
+[ext_resource type="Script" uid="uid://cm5nwic2ygcvl" path="res://Bondables/SuperBondableStatic.gd" id="1_8csgg"]
 [ext_resource type="PackedScene" uid="uid://cq5m88rik1sb4" path="res://Objects/Building2.glb" id="2_b8wqc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_546xs"]
 size = Vector3(6.0200806, 20.022522, 6.0546875)
 
-[node name="Building2Bondable" type="CharacterBody3D" unique_id=1938894608]
+[node name="Building2Bondable" type="StaticBody3D" unique_id=1938894608]
 script = ExtResource("1_8csgg")
 metal_given = 240.0
 minimum_metal_threshhold = 500.0

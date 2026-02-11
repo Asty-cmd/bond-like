@@ -1,0 +1,7 @@
+[gd_resource type="MultiMesh" format=3 uid="uid://dg56ahllmu3os"]
+
+[ext_resource type="ArrayMesh" uid="uid://cdlxfbiwfxlka" path="res://Objects/Meshes/Tree_Cylinder_001.res" id="1_5y416"]
+
+[resource]
+transform_format = 1
+mesh = ExtResource("1_5y416")

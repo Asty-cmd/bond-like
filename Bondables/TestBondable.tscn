@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dnt5hw3sb7k0u"]
 
-[ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_t6s48"]
+[ext_resource type="Script" uid="uid://bbhar7rubyjj8" path="res://Bondables/SuperBondableCharacter.gd" id="1_t6s48"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_gkshc"]
 size = Vector3(0.2, 0.2, 0.2)

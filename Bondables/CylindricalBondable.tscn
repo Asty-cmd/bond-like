@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bxo4sgl7myde7"]
 
-[ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_2vjfw"]
+[ext_resource type="Script" uid="uid://bbhar7rubyjj8" path="res://Bondables/SuperBondableCharacter.gd" id="1_2vjfw"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_2vjfw"]
 

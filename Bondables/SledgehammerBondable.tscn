@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bt68ofvjpg5on"]
 
 [ext_resource type="PackedScene" uid="uid://dcepeqah1anu2" path="res://Objects/Sledgehammer.glb" id="1_45dyf"]
-[ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_uscl2"]
+[ext_resource type="Script" uid="uid://bbhar7rubyjj8" path="res://Bondables/SuperBondableCharacter.gd" id="1_uscl2"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_uscl2"]
 height = 4.55249

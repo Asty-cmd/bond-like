@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bevu0goj8snkx"]
 
-[ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_dmkxo"]
+[ext_resource type="Script" uid="uid://bbhar7rubyjj8" path="res://Bondables/SuperBondableCharacter.gd" id="1_dmkxo"]
 [ext_resource type="PackedScene" uid="uid://coudg83p88hcb" path="res://Objects/PoliceCar.glb" id="2_dmkxo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4l14u"]

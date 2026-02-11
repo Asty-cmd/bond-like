@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cvpgi4f7vpuch"]
 
-[ext_resource type="Script" uid="uid://f0r8i1y2l24v" path="res://Bondables/super_bondable.gd" id="1_drh3l"]
+[ext_resource type="Script" uid="uid://cm5nwic2ygcvl" path="res://Bondables/SuperBondableStatic.gd" id="1_drh3l"]
 [ext_resource type="PackedScene" uid="uid://chlqido2y3h6t" path="res://Objects/Sawmill1.glb" id="2_vsiyw"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_drh3l"]
@@ -19,7 +19,7 @@ radius = 0.22949219
 height = 0.37780952
 radius = 0.16992188
 
-[node name="Sawmill1Bondable" type="CharacterBody3D" unique_id=1526310685]
+[node name="Sawmill1Bondable" type="StaticBody3D" unique_id=936516525]
 script = ExtResource("1_drh3l")
 metal_given = 20.0
 minimum_metal_threshhold = 40.0
