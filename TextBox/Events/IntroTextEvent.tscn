@@ -1,23 +1,24 @@
 [gd_scene format=3 uid="uid://ho15yynwmnfv"]
 
-[ext_resource type="Script" uid="uid://dt5hpbqsd8xje" path="res://TextBox/Events/test_event.gd" id="1_h3ro7"]
-[ext_resource type="Resource" uid="uid://bq05a2v57rvtu" path="res://TextBox/Narrator.dialogue" id="3_h3ro7"]
-[ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/dialogue_label.gd" id="4_3j3pd"]
+[ext_resource type="Script" path="res://TextBox/Events/GameEvent.gd" id="1"]
+[ext_resource type="Script" path="res://TextBox/Events/Actions/DialogueEventAction.gd" id="2"]
+[ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/dialogue_label.gd" id="3"]
+[ext_resource type="Resource" uid="uid://bq05a2v57rvtu" path="res://TextBox/Narrator.dialogue" id="4"]
 
-[node name="IntroTextEvent" type="Node3D" unique_id=414863817 node_paths=PackedStringArray("diag_lab")]
-script = ExtResource("1_h3ro7")
-object_to_spawn = null
-diag_lab = NodePath("DialogueLabel2")
-diag_text = ExtResource("3_h3ro7")
-metadata/_custom_type_script = "uid://dlujf2isi806u"
+[node name="IntroTextEvent" type="Node3D"]
+script = ExtResource("1")
 
-[node name="DialogueLabel2" type="RichTextLabel" parent="." unique_id=525284190]
+[node name="DialogueAction" type="Node" parent="."]
+script = ExtResource("2")
+dialogue_resource = ExtResource("4")
+
+[node name="DialogueLabel" type="RichTextLabel" parent="DialogueAction"]
 z_index = 1
 offset_left = 10.0
 offset_top = 294.0
 offset_right = 402.0
 offset_bottom = 463.0
-script = ExtResource("4_3j3pd")
+script = ExtResource("3")
 pause_at_characters = ".?!-"
 skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
 seconds_per_pause_step = 0.5

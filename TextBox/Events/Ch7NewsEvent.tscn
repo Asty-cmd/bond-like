@@ -1,25 +1,31 @@
 [gd_scene format=3 uid="uid://ia5uo8c43lqb"]
 
-[ext_resource type="Script" uid="uid://dt5hpbqsd8xje" path="res://TextBox/Events/test_event.gd" id="1_37fkx"]
-[ext_resource type="PackedScene" uid="uid://bjbnrgu643euv" path="res://Bondables/SedanBondable.tscn" id="2_37fkx"]
-[ext_resource type="Resource" uid="uid://bq6q303w82m3x" path="res://TextBox/Channel News.dialogue" id="3_37fkx"]
-[ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/dialogue_label.gd" id="4_fjf4w"]
+[ext_resource type="Script" path="res://TextBox/Events/GameEvent.gd" id="1"]
+[ext_resource type="Script" path="res://TextBox/Events/Actions/DialogueEventAction.gd" id="2"]
+[ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/dialogue_label.gd" id="3"]
+[ext_resource type="Resource" uid="uid://bq6q303w82m3x" path="res://TextBox/Channel News.dialogue" id="4"]
+[ext_resource type="Script" path="res://TextBox/Events/Actions/SpawnObjectsAction.gd" id="5"]
+[ext_resource type="PackedScene" uid="uid://bjbnrgu643euv" path="res://Bondables/SedanBondable.tscn" id="6"]
 
-[node name="Ch7NewsEvent" type="Node3D" unique_id=414863817 node_paths=PackedStringArray("diag_lab")]
-script = ExtResource("1_37fkx")
-object_to_spawn = ExtResource("2_37fkx")
-diag_lab = NodePath("DialogueLabel2")
-diag_text = ExtResource("3_37fkx")
-metadata/_custom_type_script = "uid://dlujf2isi806u"
+[node name="Ch7NewsEvent" type="Node3D"]
+script = ExtResource("1")
 
-[node name="DialogueLabel2" type="RichTextLabel" parent="." unique_id=525284190]
+[node name="DialogueAction" type="Node" parent="."]
+script = ExtResource("2")
+dialogue_resource = ExtResource("4")
+
+[node name="DialogueLabel" type="RichTextLabel" parent="DialogueAction"]
 z_index = 1
 offset_left = 10.0
 offset_top = 294.0
 offset_right = 402.0
 offset_bottom = 463.0
-script = ExtResource("4_fjf4w")
+script = ExtResource("3")
 pause_at_characters = ".?!-"
 skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
 seconds_per_pause_step = 0.5
 metadata/_custom_type_script = "uid://g32um0mltv5d"
+
+[node name="SpawnAction" type="Node" parent="."]
+script = ExtResource("5")
+object_to_spawn = ExtResource("6")
