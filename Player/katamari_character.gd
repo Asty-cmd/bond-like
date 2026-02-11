@@ -26,7 +26,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	input_dir = Input.get_vector("left", "right", "forward", "backward")
 	if input_dir:
-		direction = (Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
 	if Input.is_action_just_pressed("jump") and $JumpTimer.is_stopped():
 		linear_velocity += Vector3(0, 10, 0)
