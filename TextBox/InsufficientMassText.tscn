@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d3aa35iy83o75"]
 
-[ext_resource type="Script" uid="uid://be4g6m8juh27n" path="res://TextBox/not_enough_mass.gd" id="1_isnha"]
+[ext_resource type="Script" uid="uid://be4g6m8juh27n" path="res://TextBox/InsufficientMassText.gd" id="1_ae4vs"]
 
 [node name="Not Enough Mass" type="Control" unique_id=2026212305]
 layout_mode = 3
@@ -9,7 +9,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_isnha")
+mouse_filter = 2
+script = ExtResource("1_ae4vs")
 
 [node name="Timer" type="Timer" parent="." unique_id=1015486595]
 wait_time = 3.0
